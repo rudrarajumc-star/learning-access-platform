@@ -12,7 +12,6 @@ import type {
   Tutor,
 } from "./types";
 
-// ---- Deterministic PRNG so the demo shows identical numbers every render ----
 function mulberry32(seed: number) {
   return function () {
     seed |= 0;
@@ -26,14 +25,12 @@ const rnd = mulberry32(20260623);
 const pick = <T,>(arr: T[]) => arr[Math.floor(rnd() * arr.length)];
 const between = (a: number, b: number) => Math.round(a + rnd() * (b - a));
 
-// ---------------------------------- Centers ----------------------------------
 const centers: Center[] = [
   { id: "HYD", name: "Hyderabad Center", city: "Hyderabad", region: "Telangana", country: "India" },
   { id: "POD", name: "Poduru Center", city: "Poduru", region: "Andhra Pradesh", country: "India" },
   { id: "BHI", name: "Bhimavaram Center", city: "Bhimavaram", region: "Andhra Pradesh", country: "India" },
 ];
 
-// ---------------------------------- Tutors -----------------------------------
 const tutorNames = [
   "Rudra", "Anika", "Priya", "Karthik", "Meena", "Arjun", "Lakshmi", "Vivek",
 ];
@@ -46,7 +43,6 @@ const tutors: Tutor[] = tutorNames.map((name, i) => ({
   active: i !== 7,
 }));
 
-// ---------------------------------- Topics -----------------------------------
 const topicSeed: [SubjectName, string, string, 1 | 2 | 3][] = [
   ["Math", "Fractions", "5-7", 2],
   ["Math", "Linear equations", "7-9", 3],
@@ -67,7 +63,6 @@ const topics: Topic[] = topicSeed.map(([subject, name, gradeBand, difficulty], i
   difficulty,
 }));
 
-// --------------------------------- Students ----------------------------------
 const languages = ["Telugu", "Telugu", "Telugu", "Hindi", "Tamil"];
 const englishLevels: EnglishLevel[] = ["Emerging", "Developing", "Proficient"];
 const students: Student[] = [];
@@ -95,7 +90,6 @@ centers.forEach((center, ci) => {
   }
 });
 
-// --------------------------------- Sessions ----------------------------------
 const weakAreasByTopic: Record<string, string[]> = {
   Fractions: ["common denominators", "mixed numbers", "fraction word problems"],
   "Linear equations": ["isolating variables", "two-step equations", "negative coefficients"],
@@ -154,7 +148,6 @@ for (let week = 0; week < 14; week++) {
 }
 sessions.sort((a, b) => (a.date < b.date ? 1 : -1));
 
-// ----------------------------- Practice problems -----------------------------
 const promptConditions: PromptCondition[] = [
   "basic",
   "grade_level",
@@ -198,7 +191,6 @@ topics.forEach((topic) => {
     a: "—",
     e: "Worked solution provided to the tutor.",
   };
-  // multiple prompt conditions per topic to power the research comparison
   promptConditions.forEach((cond) => {
     const copies = cond === "basic" || cond === "grade_level" ? 2 : 1;
     for (let c = 0; c < copies; c++) {
@@ -217,7 +209,6 @@ topics.forEach((topic) => {
   });
 });
 
-// ------------------------------- Rubric scores -------------------------------
 // Each prompt condition has a characteristic quality profile — this is the
 // signal the research page surfaces.
 const conditionProfile: Record<PromptCondition, Partial<Record<keyof RubricScore, number>>> = {

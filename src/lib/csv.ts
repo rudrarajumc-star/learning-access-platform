@@ -1,4 +1,3 @@
-// Tiny dependency-free CSV generator + browser download.
 export function toCsv(rows: Record<string, unknown>[]): string {
   if (rows.length === 0) return "";
   const headers = Object.keys(rows[0]);

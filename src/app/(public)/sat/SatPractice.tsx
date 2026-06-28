@@ -45,8 +45,17 @@ export default function SatPractice() {
 
   const start = (m: Mode) => {
     const pool = m === "Mixed" ? QUESTIONS : QUESTIONS.filter((q) => q.section === m);
+    // shuffle question order and each question's choices, remapping the answer
+    const built = shuffle(pool).map((q) => {
+      const order = shuffle(q.choices.map((_, i) => i));
+      return {
+        ...q,
+        choices: order.map((i) => q.choices[i]),
+        answer: order.indexOf(q.answer),
+      };
+    });
     setMode(m);
-    setDeck(shuffle(pool));
+    setDeck(built);
     setIdx(0);
     setPicked(null);
     setAnswers([]);
@@ -109,6 +118,7 @@ export default function SatPractice() {
     return (
       <Results
         answers={answers}
+        deck={deck}
         total={deck.length}
         seconds={seconds}
         bestStreak={bestStreak}
@@ -245,6 +255,7 @@ function StartScreen({ onStart }: { onStart: (m: Mode) => void }) {
 
 function Results({
   answers,
+  deck,
   total,
   seconds,
   bestStreak,
@@ -252,6 +263,7 @@ function Results({
   onHome,
 }: {
   answers: Answered[];
+  deck: Question[];
   total: number;
   seconds: number;
   bestStreak: number;
@@ -321,7 +333,7 @@ function Results({
       <h3 className="mb-3 mt-8 text-sm font-semibold uppercase tracking-wide text-ink-faint">Review</h3>
       <div className="space-y-2">
         {answers.map((a, i) => {
-          const q = QUESTIONS.find((x) => x.id === a.id)!;
+          const q = deck[i];
           return (
             <details key={a.id} className="group rounded-xl border border-border bg-surface p-4">
               <summary className="flex cursor-pointer list-none items-start gap-3">

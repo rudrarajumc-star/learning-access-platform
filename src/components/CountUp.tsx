@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-/** Animated number that counts up the first time it scrolls into view. */
 export default function CountUp({
   value,
   prefix = "",

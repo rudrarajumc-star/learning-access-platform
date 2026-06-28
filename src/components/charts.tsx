@@ -13,8 +13,7 @@ import {
   YAxis,
 } from "recharts";
 
-// Concrete colors for SVG (Recharts). CSS variables don't resolve reliably in
-// SVG fill/stroke attributes, so chart paint uses literals that mirror the theme.
+// Literal colors — CSS vars don't resolve inside SVG fill/stroke.
 const C = {
   brand: "#2d66f5",
   good: "#16a578",

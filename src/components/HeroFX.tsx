@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-/** Hero background: animated aurora + dot grid + a soft spotlight that follows the cursor. */
 export default function HeroFX() {
   const spot = useRef<HTMLDivElement>(null);
 

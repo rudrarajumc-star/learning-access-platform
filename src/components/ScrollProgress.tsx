@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-/** Thin gradient bar at the very top that fills as you scroll the page. */
 export default function ScrollProgress() {
   const [pct, setPct] = useState(0);
 

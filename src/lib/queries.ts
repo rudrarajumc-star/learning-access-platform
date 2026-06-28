@@ -13,7 +13,6 @@ export const improvement = (s: Student) =>
     ((s.currentMath - s.baselineMath) + (s.currentEnglish - s.baselineEnglish)) / 2
   );
 
-// ------------------------------- Headline KPIs -------------------------------
 export function kpis() {
   const totalMinutes = db.sessions.reduce((a, s) => a + s.durationMinutes, 0);
   const improvements = db.students.map(improvement);
@@ -29,7 +28,6 @@ export function kpis() {
   };
 }
 
-// --------------------------- Chart: sessions / week --------------------------
 export function sessionsByWeek() {
   const buckets = new Map<string, number>();
   for (const s of db.sessions) {
@@ -48,7 +46,6 @@ export function sessionsByWeek() {
     }));
 }
 
-// ------------------------- Chart: students by center -------------------------
 export function studentsByCenter() {
   return db.centers.map((c) => ({
     center: c.city,
@@ -56,7 +53,6 @@ export function studentsByCenter() {
   }));
 }
 
-// ------------------------- Weak-topic tracker (table) ------------------------
 export function weakTopics() {
   const rows = db.topics.map((t) => {
     const mentions = db.sessions.filter((s) => s.topicId === t.id);
@@ -73,7 +69,6 @@ export function weakTopics() {
   return rows.sort((a, b) => b.sessions - a.sessions);
 }
 
-// ---------------------------- Chart: tutor hours -----------------------------
 export function tutorHours() {
   return db.tutors
     .map((t) => ({
@@ -85,7 +80,6 @@ export function tutorHours() {
     .sort((a, b) => b.hours - a.hours);
 }
 
-// --------------------- Chart: improvement by subject -------------------------
 export function improvementBySubject() {
   const avg = (sel: (s: Student) => number) =>
     Math.round((db.students.reduce((a, s) => a + sel(s), 0) / db.students.length) * 10) / 10;
@@ -95,7 +89,6 @@ export function improvementBySubject() {
   ];
 }
 
-// -------------- Research: AI problem quality by prompt condition -------------
 const RUBRIC_KEYS: (keyof RubricScore)[] = [
   "correctness",
   "topicAlignment",
@@ -147,7 +140,6 @@ export function promptConditionStats() {
   });
 }
 
-// ------------------------------ Recent activity ------------------------------
 export function recentActivity() {
   return db.sessions.slice(0, 6).map((s) => {
     const t = topic(s.topicId);

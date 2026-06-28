@@ -1,12 +1,7 @@
 import { NextResponse } from "next/server";
 
-/**
- * Receives submissions from the public forms (tutor request, volunteer, contact).
- *
- * It always succeeds for the user. If RESEND_API_KEY and LEAD_NOTIFY_EMAIL are
- * set (in .env.local / Vercel env), it emails you the submission. Until then it
- * just logs to the server console, so nothing breaks before you wire up email.
- */
+// Emails form submissions when RESEND_API_KEY + LEAD_NOTIFY_EMAIL are set,
+// otherwise logs them. Always returns success to the user.
 export async function POST(req: Request) {
   let data: Record<string, unknown> = {};
   try {

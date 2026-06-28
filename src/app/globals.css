@@ -141,8 +141,6 @@ h3 {
   );
 }
 
-/* ---------------------------------------------------------------- motion --- */
-
 /* Animated aurora blobs behind the hero */
 .aurora {
   position: absolute;

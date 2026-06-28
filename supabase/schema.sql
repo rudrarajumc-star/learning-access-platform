@@ -5,7 +5,6 @@
 
 create extension if not exists "pgcrypto";
 
--- ------------------------------------------------------------------ centers --
 create table if not exists centers (
   id           text primary key,            -- short code, e.g. HYD
   name         text not null,
@@ -15,7 +14,6 @@ create table if not exists centers (
   created_at   timestamptz default now()
 );
 
--- ------------------------------------------------------------------- tutors --
 create table if not exists tutors (
   id           text primary key,
   name         text not null,
@@ -27,7 +25,6 @@ create table if not exists tutors (
   created_at   timestamptz default now()
 );
 
--- ----------------------------------------------------------------- students --
 -- Store anonymized codes only — no raw PII.
 create table if not exists students (
   id                 text primary key,      -- anonymized code, e.g. HYD-014
@@ -45,7 +42,6 @@ create table if not exists students (
   created_at         timestamptz default now()
 );
 
--- ------------------------------------------------------------------- topics --
 create table if not exists topics (
   id           text primary key,
   subject      text check (subject in ('Math','English')),
@@ -55,7 +51,6 @@ create table if not exists topics (
   description  text
 );
 
--- ----------------------------------------------------------------- sessions --
 create table if not exists sessions (
   id                text primary key default gen_random_uuid()::text,
   student_id        text references students(id) on delete cascade,
@@ -74,7 +69,6 @@ create index if not exists sessions_student_idx on sessions(student_id);
 create index if not exists sessions_tutor_idx   on sessions(tutor_id);
 create index if not exists sessions_topic_idx   on sessions(topic_id);
 
--- -------------------------------------------------------- practice_problems --
 create table if not exists practice_problems (
   id                text primary key default gen_random_uuid()::text,
   topic_id          text references topics(id),
@@ -90,7 +84,6 @@ create table if not exists practice_problems (
   created_at        timestamptz default now()
 );
 
--- ------------------------------------------------------------ rubric_scores --
 create table if not exists rubric_scores (
   id                      text primary key default gen_random_uuid()::text,
   problem_id              text references practice_problems(id) on delete cascade,
@@ -109,7 +102,6 @@ create table if not exists rubric_scores (
 );
 create index if not exists rubric_problem_idx on rubric_scores(problem_id);
 
--- --------------------------------------------------------------- resources --
 create table if not exists resources (
   id             text primary key default gen_random_uuid()::text,
   title          text,

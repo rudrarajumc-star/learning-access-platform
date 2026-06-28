@@ -1,7 +1,4 @@
-// Domain model for the Learning Access Platform.
-// These mirror the PostgreSQL/Supabase schema in supabase/schema.sql so the
-// seeded demo layer and a real database stay interchangeable.
-
+// Mirrors supabase/schema.sql.
 export type SubjectName = "Math" | "English";
 
 export type EnglishLevel = "Emerging" | "Developing" | "Proficient";

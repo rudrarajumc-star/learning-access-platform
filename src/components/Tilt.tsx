@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 
-/** Subtle 3D pointer tilt + lift on hover. Wraps any block of content. */
 export default function Tilt({
   children,
   className = "",

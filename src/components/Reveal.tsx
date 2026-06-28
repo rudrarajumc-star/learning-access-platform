@@ -2,10 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-/**
- * Scroll-triggered reveal. Fades + slides its children in the first time they
- * enter the viewport. Stagger groups with the `delay` prop (ms).
- */
 export default function Reveal({
   children,
   delay = 0,
