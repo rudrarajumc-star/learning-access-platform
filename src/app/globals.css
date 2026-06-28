@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors as space-separated RGB channels so Tailwind's /opacity works. */
+  --bg: 248 249 251;
+  --surface: 255 255 255;
+  --surface-2: 243 244 247;
+  --border: 230 232 238;
+  --ink: 11 17 33;
+  --ink-soft: 71 79 100;
+  --ink-faint: 138 145 163;
+  --brand: 45 102 245;
+  --brand-soft: 235 241 255;
+  --good: 22 165 120;
+  --warn: 211 134 10;
+  --bad: 224 70 60;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: rgb(var(--bg));
+  color: rgb(var(--ink));
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgb(var(--brand) / 0.16);
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.018em;
+}
+
+/* Thin, modern scrollbars */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgb(var(--ink) / 0.18);
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--ink) / 0.3);
+  background-clip: content-box;
+}
+
+@layer components {
+  .card {
+    @apply bg-surface border border-border rounded-xl shadow-card;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium transition-all duration-150;
+  }
+  .btn-primary {
+    @apply btn text-white;
+    background-image: linear-gradient(180deg, rgb(var(--brand) / 0.96), rgb(var(--brand)));
+    box-shadow: 0 1px 2px rgb(var(--ink) / 0.12), inset 0 1px 0 rgb(255 255 255 / 0.18);
+  }
+  .btn-primary:hover {
+    filter: brightness(1.06);
+    box-shadow: 0 4px 14px -3px rgb(var(--brand) / 0.5), inset 0 1px 0 rgb(255 255 255 / 0.18);
+  }
+  .btn-primary:active {
+    filter: brightness(0.97);
+  }
+  .btn-ghost {
+    @apply btn border border-border bg-surface text-ink-soft;
+  }
+  .btn-ghost:hover {
+    @apply bg-surface-2 text-ink;
+  }
+  .input {
+    @apply w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-ink outline-none transition-shadow placeholder:text-ink-faint;
+  }
+  .input:focus {
+    @apply border-brand;
+    box-shadow: 0 0 0 3px rgb(var(--brand) / 0.14);
+  }
+  .th {
+    @apply px-4 py-2.5 text-left text-xs font-semibold uppercase tracking-wide text-ink-faint;
+  }
+  .td {
+    @apply px-4 py-3 text-sm text-ink-soft;
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid-pattern {
+  background-image: radial-gradient(circle at 1px 1px, rgb(var(--ink) / 0.06) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+/* Soft brand glow for hero backdrops */
+.glow {
+  background: radial-gradient(
+    60% 55% at 50% 0%,
+    rgb(var(--brand) / 0.1),
+    transparent 70%
+  );
+}
+
+/* ---------------------------------------------------------------- motion --- */
+
+/* Animated aurora blobs behind the hero */
+.aurora {
+  position: absolute;
+  inset: -30% -10% auto -10%;
+  height: 620px;
+  filter: blur(70px);
+  opacity: 0.55;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 48% at 22% 32%, rgb(var(--brand) / 0.5), transparent 60%),
+    radial-gradient(34% 44% at 78% 20%, rgb(124 92 255 / 0.42), transparent 60%),
+    radial-gradient(40% 50% at 62% 72%, rgb(22 165 120 / 0.32), transparent 60%);
+  animation: aurora 16s ease-in-out infinite alternate;
+}
+@keyframes aurora {
+  0% { transform: translate3d(-4%, 0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate3d(4%, 2%, 0) scale(1.09) rotate(2deg); }
+  100% { transform: translate3d(-2%, -3%, 0) scale(1.04) rotate(-1deg); }
+}
+
+/* Living gradient text */
+.text-gradient {
+  background: linear-gradient(100deg, rgb(var(--brand)), #7c5cff 55%, #16a578);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: hue 9s ease-in-out infinite;
+}
+@keyframes hue {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Sweeping shine across buttons */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+.shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -160%;
+  width: 55%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.4), transparent);
+  animation: shine 4s ease-in-out infinite;
+}
+@keyframes shine {
+  0% { left: -160%; }
+  45%, 100% { left: 160%; }
+}
+
+/* Gentle float */
+.float {
+  animation: float 7s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+/* Slow pan for marquee rows */
+.marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Animated nav underline */
+.navlink {
+  position: relative;
+}
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgb(var(--brand)), #7c5cff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.navlink:hover::after,
+.navlink[data-active="true"]::after {
+  transform: scaleX(1);
+}
+
+/* Pulsing live dot */
+.live-dot {
+  position: relative;
+}
+.live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: inherit;
+  animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+@keyframes ping {
+  0% { transform: scale(1); opacity: 0.7; }
+  75%, 100% { transform: scale(2.4); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .aurora,
+  .text-gradient,
+  .shine::after,
+  .float,
+  .marquee,
+  .fade-up,
+  .live-dot::after {
+    animation: none !important;
+  }
+}
