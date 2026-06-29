@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "@/components/Logo";
 
 const groups: { heading: string; items: { href: string; label: string; icon: string }[] }[] = [
   {
@@ -35,7 +36,7 @@ export default function Sidebar() {
   return (
     <aside className="hidden w-60 shrink-0 border-r border-border bg-surface md:flex md:flex-col">
       <Link href="/dashboard" className="flex items-center gap-2.5 px-5 py-4">
-        <img src="/logo.svg" alt="Learning Access" className="h-8 w-8" />
+        <Logo className="h-8 w-8" />
         <div className="leading-tight">
           <div className="text-sm font-semibold text-ink">Learning Access</div>
           <div className="text-[11px] text-ink-faint">Platform</div>

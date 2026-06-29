@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { signIn } from "@/lib/actions";
+import Logo from "@/components/Logo";
 
 export default async function LoginPage({
   searchParams,
@@ -10,7 +11,7 @@ export default async function LoginPage({
 
   return (
     <div className="mx-auto flex max-w-md flex-col items-center px-5 py-24">
-      <img src="/logo.svg" alt="Learning Access" className="h-14 w-14" />
+      <Logo className="h-14 w-14" />
       <h1 className="mt-4 text-2xl font-bold text-ink">Staff sign in</h1>
       <p className="mt-1 text-center text-sm text-ink-soft">
         Coordinators and tutors only. Everything past this point is student data.

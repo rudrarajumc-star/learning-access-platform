@@ -1,5 +1,10 @@
 import SatPractice from "./SatPractice";
 
+export const metadata = {
+  title: "Free SAT Practice",
+  description: "Practice real-style SAT Math and Reading & Writing questions with an explanation after every one. Free, no account.",
+};
+
 export default function SatPage() {
   return (
     <div>

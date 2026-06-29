@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Mission",
+  description: "Why we built data-driven, free tutoring for multilingual students.",
+};
+
 export default function MissionPage() {
   const pillars = [
     {

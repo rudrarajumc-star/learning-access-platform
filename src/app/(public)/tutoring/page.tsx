@@ -1,5 +1,10 @@
 import RequestForm from "./RequestForm";
 
+export const metadata = {
+  title: "Free Tutoring",
+  description: "Free one-on-one tutoring in math and reading, in the language that's easiest for you. Request a tutor — no cost.",
+};
+
 export default function TutoringPage() {
   const forWho = [
     "You can't afford a private tutor and don't want to fall further behind.",

@@ -1,6 +1,11 @@
 import Link from "next/link";
 import JoinForm from "./JoinForm";
 
+export const metadata = {
+  title: "Volunteer",
+  description: "Volunteer as a tutor. An hour a week changes things for a kid who's falling behind.",
+};
+
 export default function JoinPage() {
   return (
     <div className="mx-auto max-w-xl px-5 py-20">

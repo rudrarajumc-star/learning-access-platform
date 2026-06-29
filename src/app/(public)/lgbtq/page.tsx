@@ -1,5 +1,10 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "LGBTQ+ Support",
+  description: "A welcoming place to learn as yourself, plus LGBTQ+ youth helplines for India and beyond.",
+};
+
 export default function LgbtqPage() {
   const crisisIndia = [
     {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PublicNav from "@/components/PublicNav";
+import MobileNav from "@/components/MobileNav";
 import ScrollProgress from "@/components/ScrollProgress";
 import Logo from "@/components/Logo";
 
@@ -21,6 +22,12 @@ const footerNav = [
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen">
+      <a
+        href="#content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-lg focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
+      >
+        Skip to content
+      </a>
       <ScrollProgress />
       <header className="sticky top-0 z-20 border-b border-border bg-surface/80 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
@@ -30,13 +37,14 @@ export default function PublicLayout({ children }: { children: React.ReactNode }
           </Link>
           <PublicNav items={nav} />
           <div className="flex items-center gap-2">
-            <Link href="/login" className="hidden text-sm text-ink-soft hover:text-ink sm:block">Tutor login</Link>
-            <Link href="/tutoring" className="btn-primary shine">Get free tutoring</Link>
+            <Link href="/login" className="hidden text-sm text-ink-soft hover:text-ink lg:block">Tutor login</Link>
+            <Link href="/tutoring" className="hidden btn-primary shine sm:inline-flex">Get free tutoring</Link>
+            <MobileNav items={nav} />
           </div>
         </div>
       </header>
 
-      <main>{children}</main>
+      <main id="content">{children}</main>
 
       <footer className="border-t border-border bg-surface">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 sm:flex-row">

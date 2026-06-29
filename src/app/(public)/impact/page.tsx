@@ -1,5 +1,10 @@
 import { kpis, studentsByCenter } from "@/lib/queries";
 
+export const metadata = {
+  title: "Impact",
+  description: "The numbers behind our free tutoring — students reached, sessions, hours, and score gains, from real data.",
+};
+
 export default function ImpactPage() {
   const k = kpis();
   const centers = studentsByCenter();
