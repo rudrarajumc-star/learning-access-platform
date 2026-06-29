@@ -69,7 +69,6 @@ export default function LearnClient() {
 
   return (
     <div>
-      {/* Filter tabs */}
       <div className="sticky top-16 z-10 -mx-5 mb-8 border-b border-border bg-bg/80 px-5 py-3 backdrop-blur">
         <div className="flex flex-wrap gap-2">
           {TABS.map((t) => {
@@ -91,7 +90,6 @@ export default function LearnClient() {
         </div>
       </div>
 
-      {/* Grid */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {shown.map((r, i) => {
           const color = catColor[r.cat];
@@ -104,12 +102,10 @@ export default function LearnClient() {
                 rel="noopener noreferrer"
                 className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface p-5 shadow-card transition-shadow duration-300 hover:shadow-lift"
               >
-                {/* hover glow */}
                 <span
                   className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-30"
                   style={{ background: color }}
                 />
-                {/* top accent */}
                 <span
                   className="absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"
                   style={{ background: color }}

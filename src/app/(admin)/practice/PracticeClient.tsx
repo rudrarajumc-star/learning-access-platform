@@ -53,7 +53,6 @@ export default function PracticeClient({
 
   return (
     <div className="grid gap-4 lg:grid-cols-3">
-      {/* Generator */}
       <div className="lg:col-span-1">
         <Generator
           topics={topics}
@@ -61,7 +60,6 @@ export default function PracticeClient({
         />
       </div>
 
-      {/* Bank */}
       <div className="lg:col-span-2">
         <div className="mb-3 flex flex-wrap items-center gap-2">
           <select className="input max-w-[150px]" value={topicF} onChange={(e) => setTopicF(e.target.value)}>

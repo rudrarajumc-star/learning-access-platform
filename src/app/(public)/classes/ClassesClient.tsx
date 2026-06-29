@@ -46,7 +46,6 @@ export default function ClassesClient() {
 
   return (
     <div>
-      {/* View switch */}
       <div className="mb-6 inline-flex rounded-xl border border-border bg-surface p-1">
         {(["schedule", "recordings"] as const).map((v) => (
           <button

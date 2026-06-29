@@ -47,7 +47,6 @@ export default function Home() {
 
   return (
     <div>
-      {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <HeroFX />
         <div className="relative mx-auto max-w-6xl px-5 py-24 text-center">
@@ -73,7 +72,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Browser mockup */}
           <div className="mx-auto mt-14 max-w-4xl overflow-hidden rounded-xl border border-border bg-surface shadow-lift fade-up">
             <div className="flex items-center gap-1.5 border-b border-border bg-surface-2 px-4 py-2.5">
               <span className="h-2.5 w-2.5 rounded-full bg-[#f5685a]" />
@@ -106,7 +104,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Tools marquee */}
       <Link href="/learn" className="group block overflow-hidden border-b border-border bg-surface py-7">
         <div className="mx-auto mb-3 max-w-6xl px-5 text-center text-xs font-medium uppercase tracking-wider text-ink-faint">
           Free tools our tutors point students to — tap to explore
@@ -122,7 +119,6 @@ export default function Home() {
         </div>
       </Link>
 
-      {/* Ways in */}
       <section className="mx-auto max-w-6xl px-5 py-16">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {paths.map((p, i) => (
@@ -146,7 +142,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SAT spotlight */}
       <section className="mx-auto max-w-6xl px-5 pb-4">
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl border border-border bg-surface p-8 shadow-card sm:p-10">
@@ -196,7 +191,6 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* Features */}
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="grid gap-5 md:grid-cols-3">
           {features.map((f, i) => (
@@ -215,7 +209,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Architecture / tech */}
       <section className="border-y border-border bg-surface">
         <div className="mx-auto max-w-6xl px-5 py-16">
           <div className="grid items-center gap-10 lg:grid-cols-2">
@@ -254,7 +247,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="mx-auto max-w-6xl px-5 py-20 text-center">
         <h2 className="text-2xl font-bold text-ink">Want to help out?</h2>
         <p className="mx-auto mt-2 max-w-xl text-ink-soft">

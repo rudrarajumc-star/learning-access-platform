@@ -52,7 +52,6 @@ export default function LgbtqPage() {
 
   return (
     <div>
-      {/* Hero */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-5 py-16">
           <div className="text-xs font-semibold uppercase tracking-wider text-brand">LGBTQ+ support</div>
@@ -67,7 +66,6 @@ export default function LgbtqPage() {
         </div>
       </section>
 
-      {/* Crisis */}
       <section className="mx-auto max-w-5xl px-5 py-12">
         <div className="rounded-xl border border-[#f3c9c4] bg-[#fdf2f1] p-6">
           <h2 className="text-base font-semibold text-ink">If you need to talk to someone right now</h2>
@@ -106,7 +104,6 @@ export default function LgbtqPage() {
         </div>
       </section>
 
-      {/* What to expect */}
       <section className="mx-auto max-w-5xl px-5 pb-16">
         <h2 className="text-xl font-semibold text-ink">What you can expect from us</h2>
         <div className="mt-5 grid gap-4 sm:grid-cols-2">

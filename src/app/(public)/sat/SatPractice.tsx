@@ -131,7 +131,6 @@ export default function SatPractice() {
   const pct = ((idx + (picked !== null ? 1 : 0)) / deck.length) * 100;
   return (
     <div className="mx-auto max-w-2xl">
-      {/* status bar */}
       <div className="mb-3 flex items-center justify-between text-sm">
         <span className="font-medium text-ink-soft">
           Question {idx + 1} <span className="text-ink-faint">/ {deck.length}</span>

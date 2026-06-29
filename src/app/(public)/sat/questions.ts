@@ -8,7 +8,7 @@ export interface Question {
   passage?: string;
   prompt: string;
   choices: string[];
-  answer: number; // index into choices (gets re-randomized at runtime)
+  answer: number;
   explanation: string;
 }
 
