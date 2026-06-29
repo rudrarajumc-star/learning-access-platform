@@ -6,7 +6,7 @@ import Logo from "@/components/Logo";
 
 const nav = [
   { href: "/tutoring", label: "Free Tutoring" },
-  { href: "/sat", label: "SAT Prep" },
+  { href: "/lessons", label: "Lessons" },
   { href: "/classes", label: "Classes" },
   { href: "/learn", label: "Learn" },
   { href: "/lgbtq", label: "LGBTQ+ Support" },

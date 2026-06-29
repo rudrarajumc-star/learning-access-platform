@@ -14,31 +14,31 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://learningaccessiniti
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Learning Access Initiative — Free tutoring & SAT prep",
+    default: "Learning Access Initiative — Free tutoring, lessons & classes",
     template: "%s · Learning Access Initiative",
   },
   description:
-    "Free tutoring, live classes, SAT practice, and learning resources for multilingual students — plus the system we use to measure whether it's working.",
+    "Free tutoring, live classes, English & math lessons, and learning resources for multilingual students — plus the system we use to measure whether it's working.",
   keywords: [
     "free tutoring",
-    "SAT prep",
+    "English grammar lessons",
+    "NCERT math",
     "multilingual students",
     "ESL",
-    "free SAT practice",
     "Learning Access Initiative",
   ],
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "Learning Access Initiative",
-    title: "Free tutoring, SAT prep & classes for multilingual students",
+    title: "Free tutoring, lessons & classes for multilingual students",
     description:
-      "Free, in your language, and built to prove it works. Tutoring, live classes, SAT practice, and resources.",
+      "Free, in your language, and built to prove it works. Tutoring, live classes, English & math lessons, and resources.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Learning Access Initiative",
-    description: "Free tutoring, SAT prep & classes for multilingual students.",
+    description: "Free tutoring, lessons & classes for multilingual students.",
   },
 };
 

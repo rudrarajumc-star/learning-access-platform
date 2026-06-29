@@ -1,9 +1,9 @@
 # Learning Access Initiative
 
 A full-stack platform for a free tutoring nonprofit serving multilingual, low-resource students.
-It has two sides: a **public website** (free tutoring, live classes, SAT practice, and a curated
-learning-resource hub) and a **private staff platform** (dashboards, student/session tracking,
-analytics, CSV export, and an AI practice-problem research workflow).
+It has two sides: a **public website** (free tutoring, live classes, in-app English & math
+lessons, and a curated learning-resource hub) and a **private staff platform** (dashboards,
+student/session tracking, analytics, CSV export, and an AI practice-problem research workflow).
 
 > Runs with **zero setup** — `npm install && npm run dev`. It ships with a deterministic seeded
 > demo dataset, working forms, and a shared-code login, so the whole thing is browsable
@@ -12,9 +12,10 @@ analytics, CSV export, and an AI practice-problem research workflow).
 ## Features
 
 **Public site**
-- **Free tutoring** request form, **live class** schedule + recordings, **SAT practice** engine
-  (instant feedback, explanations, per-topic scoring, review), **LGBTQ+ support** with vetted
-  helplines (India + US/international), and a **Learn** hub linking 20+ free resources.
+- **Free tutoring** request form, **live class** schedule + recordings, in-app **Lessons**
+  (Wren & Martin–style English grammar lessons and NCERT-aligned math by age group, with worked
+  examples), **LGBTQ+ support** with vetted helplines (India + US/international), and a **Learn**
+  hub linking 20+ free resources.
 - Volunteer + contact forms, Mission/Impact/Research pages.
 - Animated, responsive UI: cursor-spotlight hero, scroll reveals, 3D-tilt cards, count-up stats,
   animated charts; full mobile menu and `prefers-reduced-motion` support.
@@ -59,7 +60,7 @@ Staff login: **Tutor login** → access code `lai-2026` (change via `LA_ACCESS_C
 ```
 src/
   app/
-    (public)/   marketing + student-facing: home, tutoring, sat, classes, learn,
+    (public)/   marketing + student-facing: home, tutoring, lessons, classes, learn,
                 lgbtq, impact, mission, join, contact, privacy, terms, login
     (admin)/    staff platform: dashboard, students, sessions, research-scores, exports, …
     api/lead/   form submission handler (email-ready)

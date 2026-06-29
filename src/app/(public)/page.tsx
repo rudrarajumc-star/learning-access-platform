@@ -150,40 +150,42 @@ export default function Home() {
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-ink-soft">
                   <span className="live-dot inline-block h-2 w-2 rounded-full bg-brand" />
-                  New · Free SAT practice
+                  New · Lessons in the app
                 </div>
                 <h2 className="mt-3 text-3xl font-extrabold tracking-tight2 text-ink">
-                  Practice the <span className="text-gradient">SAT</span>, free.
+                  Learn <span className="text-gradient">English &amp; Math</span>, free.
                 </h2>
                 <p className="mt-2 text-ink-soft">
-                  Real-style Math and Reading &amp; Writing questions with an explanation after every
-                  one. Track your score, see your weak spots, retry instantly.
+                  Grammar lessons in the style of Wren &amp; Martin, and math by age group following
+                  the NCERT syllabus — with a worked example for every topic.
                 </p>
                 <ul className="mt-4 space-y-1.5 text-sm text-ink-soft">
-                  {["Instant feedback + worked explanations", "Score and per-topic breakdown", "No account, no paywall"].map((b) => (
+                  {["Read full lessons right in the page", "Math sorted by your age group", "Worked examples, no account"].map((b) => (
                     <li key={b} className="flex items-center gap-2">
                       <span className="text-good">✓</span> {b}
                     </li>
                   ))}
                 </ul>
-                <Link href="/sat" className="btn-primary shine mt-6 inline-flex px-5 py-2.5 text-base">
-                  Start practicing →
+                <Link href="/lessons" className="btn-primary shine mt-6 inline-flex px-5 py-2.5 text-base">
+                  Start learning →
                 </Link>
               </div>
 
               <div className="rounded-2xl border border-border bg-surface p-5 shadow-lift">
                 <div className="mb-2 flex items-center gap-2 text-xs">
-                  <span className="chip bg-brand-soft text-brand">Math</span>
-                  <span className="chip bg-surface-2 text-ink-soft">Algebra</span>
+                  <span className="chip bg-brand-soft text-brand">Grammar</span>
+                  <span className="chip bg-surface-2 text-ink-soft">Articles</span>
                 </div>
-                <p className="font-semibold text-ink">If 3x + 7 = 22, what is the value of x?</p>
-                <div className="mt-3 space-y-2 text-sm">
-                  <div className="flex items-center gap-3 rounded-lg border border-border p-2.5"><span className="flex h-6 w-6 items-center justify-center rounded-md bg-surface-2 text-xs font-bold text-ink-soft">A</span> 3</div>
-                  <div className="flex items-center gap-3 rounded-lg border border-good bg-[#16a578]/10 p-2.5"><span className="flex h-6 w-6 items-center justify-center rounded-md bg-good text-xs font-bold text-white">✓</span> 5</div>
-                  <div className="flex items-center gap-3 rounded-lg border border-border p-2.5 opacity-60"><span className="flex h-6 w-6 items-center justify-center rounded-md bg-surface-2 text-xs font-bold text-ink-soft">C</span> 7</div>
-                </div>
-                <div className="mt-3 rounded-lg bg-surface-2/60 p-3 text-xs text-ink-soft">
-                  <span className="font-semibold text-good">Correct.</span> Subtract 7 → 3x = 15, divide by 3 → x = 5.
+                <p className="font-semibold text-ink">A, an, or the?</p>
+                <p className="mt-2 text-sm text-ink-soft">
+                  Use <span className="font-medium text-ink">a</span> before a consonant sound and{" "}
+                  <span className="font-medium text-ink">an</span> before a vowel sound. Use{" "}
+                  <span className="font-medium text-ink">the</span> for something specific.
+                </p>
+                <div className="mt-3 space-y-1.5 rounded-lg bg-surface-2/60 p-3 text-sm text-ink">
+                  <div><span className="mr-2 text-brand">›</span>an honest man (vowel sound)</div>
+                  <div><span className="mr-2 text-brand">›</span>a university (yoo-sound)</div>
+                  <div><span className="mr-2 text-brand">›</span>the sun is bright</div>
                 </div>
               </div>
             </div>

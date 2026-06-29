@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Learning Access Initiative — free tutoring, SAT prep & classes";
+export const alt = "Learning Access Initiative — free tutoring, lessons & classes";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -42,7 +42,7 @@ export default function OpengraphImage() {
 
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: "68px", fontWeight: 800, color: "#0b1121", lineHeight: 1.05, letterSpacing: "-2px" }}>
-            Free tutoring, SAT prep
+            Free tutoring, lessons
           </div>
           <div style={{ fontSize: "68px", fontWeight: 800, color: "#2d66f5", lineHeight: 1.05, letterSpacing: "-2px" }}>
             &amp; classes that work.
@@ -53,7 +53,7 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", gap: "12px" }}>
-          {["Free tutoring", "SAT practice", "Live classes", "Learn hub"].map((t) => (
+          {["Free tutoring", "English & math lessons", "Live classes", "Learn hub"].map((t) => (
             <div
               key={t}
               style={{

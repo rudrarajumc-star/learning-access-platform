@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Learning Access Initiative",
     short_name: "Learning Access",
-    description: "Free tutoring, SAT prep, classes, and learning resources for multilingual students.",
+    description: "Free tutoring, lessons, classes, and learning resources for multilingual students.",
     start_url: "/",
     display: "standalone",
     background_color: "#f8f9fb",
