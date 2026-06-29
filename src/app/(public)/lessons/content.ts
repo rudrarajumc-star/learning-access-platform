@@ -548,3 +548,68 @@ export const MATH_BANDS: GradeBand[] = [
     ],
   },
 ];
+
+export const SCIENCE_BANDS: GradeBand[] = [
+  {
+    id: "s1-2",
+    grade: "Grades 1–2",
+    ages: "Ages 6–8",
+    book: "NCERT Science (Class 1–2)",
+    topics: [
+      { title: "Living and non-living", explanation: "Living things grow, eat, breathe, and move on their own. Non-living things do not.", example: "A plant and a dog are living; a stone and a chair are non-living.", practice: [{ q: "Living or non-living: a fish?", a: "Living — it grows, eats, and moves." }] },
+      { title: "Plants around us", explanation: "Plants have roots, a stem, leaves, and often flowers. They make their own food using sunlight.", example: "Roots hold the plant and drink water; leaves catch sunlight.", practice: [{ q: "Which part of a plant holds it in the soil?", a: "The roots." }] },
+      { title: "Our body", explanation: "We use our five senses — sight, hearing, smell, taste, and touch — to learn about the world.", example: "We see with our eyes and hear with our ears.", practice: [{ q: "Which sense do we use to enjoy music?", a: "Hearing (ears)." }] },
+      { title: "Weather & seasons", explanation: "Weather is how it is outside — sunny, rainy, or windy. The main seasons are summer, the rainy season, and winter.", example: "We carry an umbrella in the rainy season.", practice: [{ q: "Which season is the hottest?", a: "Summer." }] },
+    ],
+  },
+  {
+    id: "s3-4",
+    grade: "Grades 3–4",
+    ages: "Ages 8–10",
+    book: "NCERT Science (Class 3–4)",
+    topics: [
+      { title: "Parts of a plant", explanation: "Each plant part has a job: roots absorb water, the stem carries it, leaves make food, and flowers make seeds.", example: "A mango tree's leaves make food; its flowers become mangoes with seeds.", practice: [{ q: "Which part makes the plant's food?", a: "The leaves." }] },
+      { title: "Animals and their food", explanation: "Herbivores eat plants, carnivores eat other animals, and omnivores eat both.", example: "A cow is a herbivore; a tiger is a carnivore; a crow is an omnivore.", practice: [{ q: "What do we call an animal that eats only plants?", a: "A herbivore." }] },
+      { title: "Water", explanation: "Water can be a solid (ice), a liquid (water), or a gas (steam). Heating and cooling change its form.", example: "Ice melts into water; water boils into steam.", practice: [{ q: "What do we call water in its solid form?", a: "Ice." }] },
+      { title: "Materials around us", explanation: "Things are made of materials like wood, metal, plastic, and glass. We choose materials by their properties.", example: "A window is glass because it is transparent; a spoon is metal because it is strong.", practice: [{ q: "Why are cooking pots usually made of metal?", a: "Metal is strong and carries heat well." }] },
+    ],
+  },
+  {
+    id: "s5-6",
+    grade: "Grades 5–6",
+    ages: "Ages 10–12",
+    book: "NCERT Science (Class 5–6)",
+    topics: [
+      { title: "The human body", explanation: "Organs work in systems. The digestive system breaks down food; the respiratory system takes in oxygen.", example: "We breathe in oxygen with our lungs and breathe out carbon dioxide.", practice: [{ q: "Which organ helps us breathe?", a: "The lungs." }] },
+      { title: "Food & nutrition", explanation: "A balanced diet has carbohydrates for energy, proteins for growth, fats, vitamins, and minerals.", example: "Rice gives energy; dal and eggs give protein for growth.", practice: [{ q: "Which nutrient mainly helps the body grow?", a: "Protein." }] },
+      { title: "Light & shadow", explanation: "Light travels in straight lines. A shadow forms when an opaque object blocks light.", example: "Your shadow is long in the morning and short at noon.", practice: [{ q: "What kind of object makes a clear shadow?", a: "An opaque object (one light cannot pass through)." }] },
+      { title: "States of matter", explanation: "Matter is solid, liquid, or gas. Solids keep their shape; liquids take the shape of the container; gases spread out.", example: "A rock is solid, milk is liquid, and air is a gas.", practice: [{ q: "Which state takes the shape of its container but keeps its volume?", a: "A liquid." }] },
+    ],
+  },
+  {
+    id: "s7-8",
+    grade: "Grades 7–8",
+    ages: "Ages 12–14",
+    book: "NCERT Science (Class 7–8)",
+    topics: [
+      { title: "Photosynthesis", explanation: "Green plants make food in their leaves using sunlight, water, and carbon dioxide, giving out oxygen.", example: "Sunlight + water + CO₂ → glucose (food) + oxygen.", practice: [{ q: "What gas do plants release during photosynthesis?", a: "Oxygen." }] },
+      { title: "Cells", explanation: "The cell is the basic unit of life. Plant cells have a cell wall; animal cells do not.", example: "Your body is made of trillions of tiny cells.", practice: [{ q: "Which feature do plant cells have that animal cells lack?", a: "A cell wall." }] },
+      { title: "Force & motion", explanation: "A force is a push or a pull. It can start, stop, speed up, slow down, or change the direction of motion.", example: "Kicking a ball applies a force that makes it move.", practice: [{ q: "Name a force that slows a moving object down.", a: "Friction." }] },
+      { title: "Electric current", explanation: "Electric current flows in a closed circuit. A switch opens or closes the path.", example: "A bulb lights only when the circuit is closed (switch on).", practice: [{ q: "Will a bulb glow if the circuit is open?", a: "No — current cannot flow in an open circuit." }] },
+      { title: "Acids & bases", explanation: "Acids taste sour, bases taste bitter and feel soapy. An indicator like litmus tells them apart.", example: "Lemon juice is acidic (turns blue litmus red); soap is basic.", practice: [{ q: "What colour does blue litmus turn in an acid?", a: "Red." }] },
+    ],
+  },
+  {
+    id: "s9-10",
+    grade: "Grades 9–10",
+    ages: "Ages 14–16",
+    book: "NCERT Science (Class 9–10)",
+    topics: [
+      { title: "Atoms & molecules", explanation: "All matter is made of atoms. Atoms join to form molecules; a chemical formula shows how many of each.", example: "Water is H₂O — two hydrogen atoms and one oxygen atom.", practice: [{ q: "How many atoms are in one molecule of CO₂?", a: "Three — one carbon and two oxygen." }] },
+      { title: "Newton's laws of motion", explanation: "An object stays at rest or moves steadily unless a force acts (1st law). Force = mass × acceleration (2nd law). Every action has an equal, opposite reaction (3rd law).", example: "A rocket pushes gas down, and the gas pushes the rocket up (3rd law).", practice: [{ q: "Find the force: mass 2 kg, acceleration 3 m/s².", a: "F = m × a = 2 × 3 = 6 N." }] },
+      { title: "Chemical reactions", explanation: "In a reaction, substances change into new ones. Matter is conserved — atoms are rearranged, not lost.", example: "Iron + oxygen → rust (iron oxide).", practice: [{ q: "In a balanced reaction, is the total mass before and after the same?", a: "Yes — mass is conserved." }] },
+      { title: "Life processes", explanation: "Living things carry out nutrition, respiration, transport, and excretion to stay alive.", example: "Respiration releases energy from food: glucose + oxygen → energy + CO₂ + water.", practice: [{ q: "Which life process releases energy from food?", a: "Respiration." }] },
+      { title: "Electricity & circuits", explanation: "Voltage drives current through resistance. Ohm's law links them: V = I × R.", example: "If V = 12 V and R = 4 Ω, then I = V/R = 12/4 = 3 A.", practice: [{ q: "Find the current: V = 10 V, R = 5 Ω.", a: "I = V/R = 10/5 = 2 A." }] },
+    ],
+  },
+];
