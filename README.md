@@ -17,7 +17,9 @@ analytics, CSV export, and an AI practice-problem research workflow).
   helplines (India + US/international), and a **Learn** hub linking 20+ free resources.
 - Volunteer + contact forms, Mission/Impact/Research pages.
 - Animated, responsive UI: cursor-spotlight hero, scroll reveals, 3D-tilt cards, count-up stats,
-  animated charts. Respects `prefers-reduced-motion`. SEO: sitemap, robots, Open Graph.
+  animated charts; full mobile menu and `prefers-reduced-motion` support.
+- Production basics: keyboard-accessible (skip link, focus rings), custom 404 + error pages,
+  per-page SEO with a dynamic Open Graph image, web manifest, and security headers.
 
 **Staff platform** (behind login)
 - Dashboard, Students (+ profiles), Sessions, Tutors, Weak-Topic tracker, Practice Bank,
@@ -33,6 +35,8 @@ Next.js 15 (App Router) · TypeScript · Tailwind CSS · Recharts · seeded demo
 ```bash
 npm install
 npm run dev          # http://localhost:3000
+npm run build        # production build
+npm run lint         # eslint (clean)
 ```
 
 Staff login: **Tutor login** → access code `lai-2026` (change via `LA_ACCESS_CODE`).
