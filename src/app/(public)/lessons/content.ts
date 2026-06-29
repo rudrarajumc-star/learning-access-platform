@@ -9,6 +9,12 @@ export interface Practice {
   a: string;
 }
 
+export interface QuizQ {
+  q: string;
+  choices: string[];
+  answer: number;
+}
+
 export interface EnglishLesson {
   id: string;
   title: string;
@@ -613,3 +619,268 @@ export const SCIENCE_BANDS: GradeBand[] = [
     ],
   },
 ];
+
+export const CODING_LESSONS: EnglishLesson[] = [
+  {
+    id: "code-what",
+    title: "What is Code?",
+    summary: "Code is a set of step-by-step instructions we give a computer.",
+    sections: [
+      { heading: "Instructions for a computer", body: "Computers cannot think for themselves. They follow the exact instructions we write, called code.", examples: ["A recipe is like code for cooking.", "\"Turn on the light\" is one instruction."] },
+      { heading: "Be exact", body: "A computer does exactly what you say, not what you mean. A small mistake gives a wrong result.", examples: ["Say \"add 2 and 3\", not just \"add some numbers\"."] },
+    ],
+    practice: [{ q: "Why must instructions be exact?", a: "The computer follows them literally — it cannot guess what you meant." }],
+  },
+  {
+    id: "code-sequence",
+    title: "Step by Step (Sequencing)",
+    summary: "Sequencing means the computer runs steps in order, one after another.",
+    sections: [
+      { heading: "Order matters", body: "Steps happen from top to bottom. The wrong order gives the wrong result.", examples: ["1) Put on socks  2) Put on shoes — not the other way!"] },
+      { heading: "A simple sequence", body: "Each line runs after the one before it.", examples: ["1) get bread  2) add butter  3) eat"] },
+    ],
+    practice: [{ q: "Put in order: \"eat\", \"cook\", \"buy vegetables\".", a: "buy vegetables → cook → eat." }],
+  },
+  {
+    id: "code-variables",
+    title: "Variables",
+    summary: "A variable is a named box that stores a value you can use and change.",
+    sections: [
+      { heading: "Storing a value", body: "We give the box a name and put a value inside it.", examples: ["score = 0", "name = \"Ravi\""] },
+      { heading: "Changing it", body: "We can update the value later in the program.", examples: ["score = score + 10   (score goes up by 10)"] },
+    ],
+    practice: [{ q: "If x = 4 and then x = x + 3, what is x?", a: "7." }],
+  },
+  {
+    id: "code-input",
+    title: "Input & Output",
+    summary: "Input is what goes into a program; output is what comes out.",
+    sections: [
+      { heading: "Input", body: "Input is data the program receives, often from the user.", examples: ["A number you type in", "A button you click"] },
+      { heading: "Output", body: "Output is what the program shows or returns.", examples: ["print(\"Hello!\")  shows Hello! on the screen"] },
+    ],
+    practice: [{ q: "Is typing your name input or output?", a: "Input — it goes into the program." }],
+  },
+  {
+    id: "code-conditionals",
+    title: "Making Decisions (if / else)",
+    summary: "Conditionals let a program choose what to do based on a condition.",
+    sections: [
+      { heading: "if / else", body: "If a condition is true, do one thing; otherwise do another.", examples: ["if raining: take umbrella   else: wear a cap"] },
+      { heading: "Comparisons", body: "We compare values using >, <, and == (equals).", examples: ["if marks >= 35: print \"Pass\"   else: print \"Fail\""] },
+    ],
+    practice: [{ q: "if age >= 18 print \"adult\" else \"minor\". What prints for age 20?", a: "adult." }],
+  },
+  {
+    id: "code-loops",
+    title: "Repeating (Loops)",
+    summary: "A loop repeats a set of steps without writing them again and again.",
+    sections: [
+      { heading: "Why loops", body: "Loops let us do the same thing many times with little code.", examples: ["repeat 5 times: print \"hi\"   → prints hi five times"] },
+      { heading: "Be careful", body: "A loop with no stopping point runs forever — that is an infinite loop.", examples: ["Always make sure the loop can end."] },
+    ],
+    practice: [{ q: "How many times does \"repeat 3 times: clap\" clap?", a: "3 times." }],
+  },
+  {
+    id: "code-functions",
+    title: "Functions",
+    summary: "A function is a named block of steps you can reuse whenever you need it.",
+    sections: [
+      { heading: "Reuse", body: "Write the steps once, then call the name to run them again.", examples: ["function greet(): print \"Hello!\"", "greet()   → runs the steps"] },
+      { heading: "Inputs and outputs", body: "Functions can take values and give a result back.", examples: ["function area(l, w): return l * w", "area(5, 3)   → 15"] },
+    ],
+    practice: [{ q: "Why use functions?", a: "To reuse code and avoid writing the same steps again and again." }],
+  },
+  {
+    id: "code-debug",
+    title: "Finding Bugs (Debugging)",
+    summary: "A bug is a mistake in code; debugging is finding and fixing it.",
+    sections: [
+      { heading: "What is a bug?", body: "A bug is any error that makes the program behave wrongly.", examples: ["Using + instead of − gives the wrong total."] },
+      { heading: "How to debug", body: "Read the code slowly, check each step, and test small parts.", examples: ["Print values to see where it goes wrong."] },
+    ],
+    practice: [{ q: "Your add function returns 1 for 2 + 3. What is likely wrong?", a: "It probably uses the wrong operator (maybe − instead of +). Check the math step." }],
+  },
+];
+
+export const SOCIAL_BANDS: GradeBand[] = [
+  {
+    id: "so1-2",
+    grade: "Grades 1–2",
+    ages: "Ages 6–8",
+    book: "NCERT EVS (Class 1–2)",
+    topics: [
+      { title: "My family", explanation: "A family is the people who live together and care for one another.", example: "Parents, brothers, sisters, and grandparents are part of a family.", practice: [{ q: "Name two members of a family.", a: "Any two: mother, father, sister, brother, grandparent." }] },
+      { title: "Our neighbourhood", explanation: "Our neighbourhood is the places and people around our home.", example: "The shopkeeper, doctor, and teacher all help our neighbourhood.", practice: [{ q: "Who teaches children at school?", a: "A teacher." }] },
+      { title: "Our country, India", explanation: "We live in India. Its capital is New Delhi and its flag has three colours.", example: "The tricolour: saffron, white, and green, with a blue wheel in the middle.", practice: [{ q: "What is the capital of India?", a: "New Delhi." }] },
+      { title: "Festivals", explanation: "India has many festivals celebrated by different communities together.", example: "Diwali, Eid, Christmas, and Pongal are all celebrated in India.", practice: [{ q: "Name one Indian festival.", a: "Any: Diwali, Eid, Christmas, Pongal, Holi…" }] },
+    ],
+  },
+  {
+    id: "so3-4",
+    grade: "Grades 3–4",
+    ages: "Ages 8–10",
+    book: "NCERT EVS (Class 3–4)",
+    topics: [
+      { title: "States and capitals", explanation: "India is divided into states, and each state has a capital city.", example: "Telangana's capital is Hyderabad; Maharashtra's is Mumbai.", practice: [{ q: "What is the capital of Telangana?", a: "Hyderabad." }] },
+      { title: "Maps & directions", explanation: "A map shows places from above. The four main directions are North, South, East, and West.", example: "The sun rises in the East and sets in the West.", practice: [{ q: "In which direction does the sun rise?", a: "East." }] },
+      { title: "People who help us", explanation: "Many people serve the community — doctors, farmers, police, and postmen.", example: "Farmers grow the food we eat every day.", practice: [{ q: "Who grows our food?", a: "Farmers." }] },
+      { title: "Transport & communication", explanation: "We travel by road, rail, water, and air, and we communicate by phone, post, and internet.", example: "A train runs on rails; a letter is sent by post.", practice: [{ q: "Name one way to communicate over a distance.", a: "Phone, letter/post, or email." }] },
+    ],
+  },
+  {
+    id: "so5-6",
+    grade: "Grades 5–6",
+    ages: "Ages 10–12",
+    book: "NCERT Social Science (Class 5–6)",
+    topics: [
+      { title: "Continents & oceans", explanation: "The Earth has 7 continents and 5 oceans.", example: "Asia is the largest continent and the Pacific is the largest ocean. India is in Asia.", practice: [{ q: "Which continent is India in?", a: "Asia." }] },
+      { title: "Rivers & mountains of India", explanation: "India has great rivers and high mountain ranges.", example: "The Ganga is a major river; the Himalayas are the highest mountains.", practice: [{ q: "Name the highest mountain range in India.", a: "The Himalayas." }] },
+      { title: "Ancient India", explanation: "Long ago, the Indus Valley Civilisation built well-planned cities.", example: "Harappa and Mohenjo-daro had brick houses and covered drains.", practice: [{ q: "Name one Indus Valley city.", a: "Harappa or Mohenjo-daro." }] },
+      { title: "Our Constitution", explanation: "The Constitution is the set of rules by which India is governed. It came into effect on 26 January 1950.", example: "We celebrate Republic Day on 26 January.", practice: [{ q: "When did the Constitution of India come into effect?", a: "26 January 1950." }] },
+    ],
+  },
+  {
+    id: "so7-8",
+    grade: "Grades 7–8",
+    ages: "Ages 12–14",
+    book: "NCERT Social Science (Class 7–8)",
+    topics: [
+      { title: "Medieval India", explanation: "After ancient times, many kingdoms and empires ruled different parts of India.", example: "The Mughals built the Taj Mahal in Agra.", practice: [{ q: "Who built the Taj Mahal?", a: "The Mughal emperor Shah Jahan." }] },
+      { title: "Climate & resources", explanation: "India has many climates and natural resources such as water, soil, and minerals.", example: "The monsoon brings the rain that farmers depend on.", practice: [{ q: "Which seasonal wind brings most of India's rain?", a: "The monsoon." }] },
+      { title: "Democracy & government", explanation: "India is a democracy — the people elect their leaders by voting.", example: "Citizens vote to choose their Members of Parliament.", practice: [{ q: "How do citizens choose leaders in a democracy?", a: "By voting in elections." }] },
+      { title: "Sectors of work", explanation: "People earn a living through farming, industry, and services.", example: "A farmer (primary), a factory worker (secondary), a teacher (tertiary).", practice: [{ q: "Farming belongs to which sector?", a: "The primary sector." }] },
+    ],
+  },
+  {
+    id: "so9-10",
+    grade: "Grades 9–10",
+    ages: "Ages 14–16",
+    book: "NCERT Social Science (Class 9–10)",
+    topics: [
+      { title: "India's freedom struggle", explanation: "India became free from British rule on 15 August 1947 after a long struggle.", example: "Mahatma Gandhi led non-violent movements such as the Salt March.", practice: [{ q: "On what date did India gain independence?", a: "15 August 1947." }] },
+      { title: "Latitudes & longitudes", explanation: "Imaginary lines help us locate places on the globe. Latitudes run east-west; longitudes run north-south.", example: "The Equator is 0° latitude; the Prime Meridian is 0° longitude.", practice: [{ q: "What is the 0° latitude line called?", a: "The Equator." }] },
+      { title: "Fundamental Rights", explanation: "The Constitution gives citizens rights such as equality, freedom, and education.", example: "The Right to Equality means no discrimination by caste, religion, or gender.", practice: [{ q: "Name one Fundamental Right.", a: "Any: equality, freedom, against exploitation, education…" }] },
+      { title: "Sectors of the economy", explanation: "The economy has primary (farming), secondary (industry), and tertiary (services) sectors.", example: "Banking and teaching are tertiary-sector services.", practice: [{ q: "Which sector does manufacturing belong to?", a: "The secondary sector." }] },
+    ],
+  },
+];
+
+export const QUIZZES: Record<string, QuizQ[]> = {
+  sentence: [
+    { q: "Which is a complete sentence?", choices: ["Under the big tree", "The dog barked loudly.", "Running very fast"], answer: 1 },
+    { q: "What kind of sentence is \"Please sit down.\"?", choices: ["Assertive", "Imperative", "Exclamatory"], answer: 1 },
+  ],
+  nouns: [
+    { q: "Which is a proper noun?", choices: ["river", "Ganga", "water"], answer: 1 },
+    { q: "Which is a collective noun?", choices: ["team", "player", "ball"], answer: 0 },
+  ],
+  number: [
+    { q: "What is the plural of \"box\"?", choices: ["boxs", "boxes", "boxen"], answer: 1 },
+    { q: "What is the plural of \"child\"?", choices: ["childs", "children", "childes"], answer: 1 },
+  ],
+  gender: [
+    { q: "What is the feminine of \"king\"?", choices: ["queen", "prince", "lord"], answer: 0 },
+    { q: "Which word is neuter?", choices: ["boy", "table", "aunt"], answer: 1 },
+  ],
+  pronouns: [
+    { q: "Replace \"Ravi\": \"Ravi is tall.\"", choices: ["He", "Him", "His"], answer: 0 },
+    { q: "Which is a possessive pronoun?", choices: ["they", "mine", "you"], answer: 1 },
+  ],
+  articles: [
+    { q: "Choose: \"___ apple a day.\"", choices: ["A", "An", "The"], answer: 1 },
+    { q: "Choose: \"He is ___ honest boy.\"", choices: ["a", "an", "the"], answer: 1 },
+  ],
+  adjectives: [
+    { q: "What is the superlative of \"big\"?", choices: ["bigger", "biggest", "more big"], answer: 1 },
+    { q: "Which word is the adjective in \"a red car\"?", choices: ["a", "red", "car"], answer: 1 },
+  ],
+  verbs: [
+    { q: "Find the verb: \"She sings well.\"", choices: ["She", "sings", "well"], answer: 1 },
+    { q: "Which is a helping verb?", choices: ["run", "is", "quickly"], answer: 1 },
+  ],
+  adverbs: [
+    { q: "Find the adverb: \"He runs quickly.\"", choices: ["He", "runs", "quickly"], answer: 2 },
+    { q: "An adverb can describe a ___.", choices: ["noun", "verb", "article"], answer: 1 },
+  ],
+  prepositions: [
+    { q: "Choose: \"The cat is ___ the table.\"", choices: ["on", "and", "run"], answer: 0 },
+    { q: "Which word is a preposition?", choices: ["under", "happy", "jump"], answer: 0 },
+  ],
+  conjunctions: [
+    { q: "Which word joins: \"tea ___ coffee\"?", choices: ["or", "run", "blue"], answer: 0 },
+    { q: "Which is a conjunction?", choices: ["but", "fast", "table"], answer: 0 },
+  ],
+  interjections: [
+    { q: "Which is an interjection?", choices: ["Hurray!", "table", "slowly"], answer: 0 },
+    { q: "Interjections express ___.", choices: ["actions", "sudden feelings", "numbers"], answer: 1 },
+  ],
+  tenses: [
+    { q: "What is the past tense of \"go\"?", choices: ["goed", "went", "gone"], answer: 1 },
+    { q: "\"She is reading\" is in the ___ tense.", choices: ["simple past", "present continuous", "future"], answer: 1 },
+  ],
+  agreement: [
+    { q: "Choose: \"The dogs ___ barking.\"", choices: ["is", "are", "am"], answer: 1 },
+    { q: "Choose: \"Each boy ___ a bag.\"", choices: ["have", "has", "are"], answer: 1 },
+  ],
+  voice: [
+    { q: "Passive of \"He ate the apple.\"", choices: ["The apple was eaten by him.", "He is eating.", "The apple eats him."], answer: 0 },
+    { q: "In the active voice, the subject ___.", choices: ["receives the action", "does the action", "is removed"], answer: 1 },
+  ],
+  speech: [
+    { q: "Indirect form of: She said, \"I am tired.\"", choices: ["She said she is tired.", "She said that she was tired.", "She say tired."], answer: 1 },
+    { q: "Direct speech uses ___.", choices: ["quotation marks", "no punctuation", "only commas"], answer: 0 },
+  ],
+  punctuation: [
+    { q: "Which mark ends a question?", choices: [".", "?", "!"], answer: 1 },
+    { q: "Which needs a capital letter?", choices: ["the word \"dog\"", "the name \"Delhi\"", "the word \"and\""], answer: 1 },
+  ],
+  confusions: [
+    { q: "Choose: \"___ raining outside.\"", choices: ["It's", "Its"], answer: 0 },
+    { q: "Choose: \"___ going to win.\"", choices: ["Your", "You're"], answer: 1 },
+  ],
+  vocab: [
+    { q: "Which is a synonym for \"happy\"?", choices: ["sad", "glad", "tall"], answer: 1 },
+    { q: "Which is an antonym for \"hot\"?", choices: ["warm", "cold", "fire"], answer: 1 },
+  ],
+  comprehension: [
+    { q: "What is the first step in comprehension?", choices: ["Answer before reading", "Read the whole passage", "Copy random lines"], answer: 1 },
+    { q: "The best way to answer is to ___.", choices: ["copy long lines", "use a full sentence with proof", "guess"], answer: 1 },
+  ],
+  letter: [
+    { q: "Which closing is formal?", choices: ["With love", "Yours faithfully", "Bye"], answer: 1 },
+    { q: "A formal letter should be ___.", choices: ["long and chatty", "brief and polite", "full of slang"], answer: 1 },
+  ],
+  "code-what": [
+    { q: "Code is a set of ___ for a computer.", choices: ["pictures", "instructions", "feelings"], answer: 1 },
+    { q: "A computer does ___.", choices: ["exactly what you tell it", "whatever it wants", "nothing"], answer: 0 },
+  ],
+  "code-sequence": [
+    { q: "Sequencing means steps run ___.", choices: ["in any order", "in order, one by one", "backwards"], answer: 1 },
+    { q: "If steps are in the wrong order, the program ___.", choices: ["still works perfectly", "may give a wrong result", "deletes itself"], answer: 1 },
+  ],
+  "code-variables": [
+    { q: "A variable is like a ___ that stores a value.", choices: ["box", "cloud", "wall"], answer: 0 },
+    { q: "After \"score = 5; score = score + 1\", score is ___.", choices: ["5", "6", "51"], answer: 1 },
+  ],
+  "code-input": [
+    { q: "Input is information that ___.", choices: ["goes into the program", "comes out of the program", "is deleted"], answer: 0 },
+    { q: "Showing a result on the screen is ___.", choices: ["input", "output", "a bug"], answer: 1 },
+  ],
+  "code-conditionals": [
+    { q: "\"if / else\" lets a program ___.", choices: ["repeat forever", "make a decision", "store data"], answer: 1 },
+    { q: "if age >= 18 print \"adult\" else \"minor\". For age 15?", choices: ["adult", "minor", "error"], answer: 1 },
+  ],
+  "code-loops": [
+    { q: "A loop is used to ___.", choices: ["repeat steps", "make decisions", "stop the program"], answer: 0 },
+    { q: "A loop that never ends is called an ___ loop.", choices: ["input", "infinite", "empty"], answer: 1 },
+  ],
+  "code-functions": [
+    { q: "A function is a ___ block of steps you can reuse.", choices: ["named", "random", "broken"], answer: 0 },
+    { q: "Functions help avoid ___.", choices: ["repeating code", "writing code", "using variables"], answer: 0 },
+  ],
+  "code-debug": [
+    { q: "A bug is ___.", choices: ["an insect in the screen", "a mistake in the code", "a fast program"], answer: 1 },
+    { q: "Debugging means ___.", choices: ["adding bugs", "finding and fixing mistakes", "deleting the file"], answer: 1 },
+  ],
+};

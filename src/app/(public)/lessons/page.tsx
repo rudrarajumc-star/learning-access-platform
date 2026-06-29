@@ -1,8 +1,8 @@
 import Lessons from "./Lessons";
 
 export const metadata = {
-  title: "Lessons — English, Math & Science",
-  description: "Free English grammar lessons plus age-by-age math and science, with worked examples and practice — and track your progress.",
+  title: "Lessons — English, Math, Science, Social Studies & Coding",
+  description: "Free lessons in English, math, science, social studies, and coding — worked examples, quizzes, and progress tracking, right in the app.",
 };
 
 export default function LessonsPage() {
@@ -14,11 +14,11 @@ export default function LessonsPage() {
         <div className="relative mx-auto max-w-5xl px-5 py-14">
           <div className="text-xs font-semibold uppercase tracking-wider text-brand">Lessons</div>
           <h1 className="mt-2 max-w-2xl text-3xl font-extrabold leading-[1.08] tracking-tight2 text-ink sm:text-4xl">
-            Learn <span className="text-gradient">English, Math &amp; Science</span>, right here.
+            Learn <span className="text-gradient">English, Math, Science &amp; more</span>, right here.
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-            Grammar lessons in the style of Wren &amp; Martin, plus math and science by age group
-            following the NCERT syllabus — worked examples, practice, and progress you can track. Free.
+            Five subjects — English grammar, and math, science, social studies &amp; coding by age
+            group. Worked examples, quizzes, and progress you can track. Free, no account.
           </p>
         </div>
       </section>
