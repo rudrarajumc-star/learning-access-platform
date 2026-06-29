@@ -157,6 +157,12 @@ function MathView() {
                   <span className="font-medium text-brand">Example. </span>
                   {t.example}
                 </div>
+                {t.practice?.map((p, j) => (
+                  <details key={j} className="mt-2 rounded-lg border border-border p-3 text-sm">
+                    <summary className="cursor-pointer font-medium text-ink">Try it: {p.q}</summary>
+                    <p className="mt-2 text-good">{p.a}</p>
+                  </details>
+                ))}
               </div>
             </Reveal>
           ))}
