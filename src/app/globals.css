@@ -261,6 +261,18 @@ h3 {
   75%, 100% { transform: scale(2.4); opacity: 0; }
 }
 
+@media print {
+  body * { visibility: hidden; }
+  .cert-print, .cert-print * { visibility: visible; }
+  .cert-print {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .aurora,

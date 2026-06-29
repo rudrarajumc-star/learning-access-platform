@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import {
   CODING_LESSONS,
@@ -52,18 +53,23 @@ export default function Lessons() {
 
   return (
     <div>
-      <div className="mb-8 flex flex-wrap gap-1 rounded-xl border border-border bg-surface p-1">
-        {TABS.map(([key, label]) => (
-          <button
-            key={key}
-            onClick={() => setTab(key)}
-            className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${
-              tab === key ? "bg-ink text-white shadow-card" : "text-ink-soft hover:text-ink"
-            }`}
-          >
-            {label}
-          </button>
-        ))}
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap gap-1 rounded-xl border border-border bg-surface p-1">
+          {TABS.map(([key, label]) => (
+            <button
+              key={key}
+              onClick={() => setTab(key)}
+              className={`rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${
+                tab === key ? "bg-ink text-white shadow-card" : "text-ink-soft hover:text-ink"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <Link href="/progress" className="text-sm font-medium text-brand hover:underline">
+          My progress →
+        </Link>
       </div>
 
       {tab === "english" && <LessonReader lessons={ENGLISH_LESSONS} heading="Grammar lessons" />}

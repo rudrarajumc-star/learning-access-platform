@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/tutoring",
     "/lessons",
+    "/progress",
     "/classes",
     "/learn",
     "/lgbtq",
