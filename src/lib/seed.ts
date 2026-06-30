@@ -31,9 +31,7 @@ const centers: Center[] = [
   { id: "BHI", name: "Bhimavaram Center", city: "Bhimavaram", region: "Andhra Pradesh", country: "India" },
 ];
 
-const tutorNames = [
-  "Rudra", "Anika", "Priya", "Karthik", "Meena", "Arjun", "Lakshmi", "Vivek",
-];
+const tutorNames = Array.from({ length: 8 }, (_, i) => `Tutor ${i + 1}`);
 const tutors: Tutor[] = tutorNames.map((name, i) => ({
   id: `T-${String(i + 1).padStart(2, "0")}`,
   name,

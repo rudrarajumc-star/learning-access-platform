@@ -32,8 +32,8 @@ export default function PublicLayout({ children }: { children: React.ReactNode }
       <header className="sticky top-0 z-20 border-b border-border bg-surface/80 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
           <Link href="/" className="group flex items-center gap-2">
-            <Logo className="h-9 w-9 transition-transform duration-200 group-hover:scale-110 group-hover:-rotate-6" />
-            <span className="font-semibold text-ink">Learning Access</span>
+            <Logo className="h-9 w-9 shrink-0 transition-transform duration-200 group-hover:scale-110 group-hover:-rotate-6" />
+            <span className="font-semibold leading-tight text-ink">Learning Access Initiative</span>
           </Link>
           <PublicNav items={nav} />
           <div className="flex items-center gap-2">

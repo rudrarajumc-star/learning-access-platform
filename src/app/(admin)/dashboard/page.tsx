@@ -108,7 +108,7 @@ export default function DashboardPage() {
                     <span className="font-medium">{a.student}</span> · {a.text}
                   </div>
                   <div className="text-[11px] text-ink-faint">
-                    Tutor {a.tutor} · {a.date}
+                    {a.tutor} · {a.date}
                   </div>
                 </div>
               </div>

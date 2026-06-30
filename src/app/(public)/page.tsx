@@ -1,13 +1,11 @@
 import Link from "next/link";
-import { kpis } from "@/lib/queries";
+import { SITE_STATS } from "@/lib/siteStats";
 import CountUp from "@/components/CountUp";
 import Reveal from "@/components/Reveal";
 import Tilt from "@/components/Tilt";
 import HeroFX from "@/components/HeroFX";
 
 export default function Home() {
-  const k = kpis();
-
   const paths = [
     { href: "/tutoring", tag: "For students", title: "Get free tutoring", body: "Math and reading, one-on-one, in the language that's easiest for you. No cost.", cta: "Request a tutor" },
     { href: "/classes", tag: "Live & free", title: "Join a class", body: "Small group classes every weekday. Reserve a seat and show up.", cta: "See the schedule" },
@@ -16,10 +14,10 @@ export default function Home() {
   ];
 
   const impact = [
-    { n: k.totalStudents, suffix: "+", label: "students reached" },
-    { n: k.activeTutors, suffix: "", label: "volunteer tutors" },
-    { n: k.totalHours, suffix: "+", label: "tutoring hours" },
-    { n: k.centers, suffix: "", label: "learning centers" },
+    { n: SITE_STATS.studentsTutored, suffix: "+", label: "students tutored" },
+    { n: SITE_STATS.tutors, suffix: "", label: "volunteer tutors" },
+    { n: SITE_STATS.tutoringHours, suffix: "+", label: "tutoring hours" },
+    { n: SITE_STATS.centers, suffix: "", label: "learning centers" },
   ];
 
   const tools = [
@@ -52,7 +50,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-6xl px-5 py-24 text-center">
           <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-ink-soft fade-up">
             <span className="h-1.5 w-1.5 rounded-full bg-good" />
-            {k.totalSessions.toLocaleString()} sessions logged across {k.centers} centers
+            {SITE_STATS.studentsTutored}+ students tutored across {SITE_STATS.centers} centers
           </div>
           <h1 className="mx-auto max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-tight2 text-ink sm:text-[3.4rem] fade-up">
             Tutoring that reaches{" "}

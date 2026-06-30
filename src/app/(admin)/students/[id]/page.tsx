@@ -92,7 +92,7 @@ export default async function StudentProfile({
                   <p className="mt-1.5 text-sm text-ink-soft">{x.notes}</p>
                   <p className="mt-1 text-xs text-brand">Next step: {x.nextStep}</p>
                   <div className="mt-2 flex items-center gap-2 text-xs text-ink-faint">
-                    Engagement <ScoreBar value={x.engagement} /> · Tutor {tutorName(x.tutorId)}
+                    Engagement <ScoreBar value={x.engagement} /> · {tutorName(x.tutorId)}
                   </div>
                 </div>
               );
