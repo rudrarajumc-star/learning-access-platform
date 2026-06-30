@@ -66,8 +66,8 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
     ],
     practice: [
-      { q: "Is this a complete sentence? — \"Running down the street\"", a: "No. It has no subject and no complete thought. A complete version: \"The boy was running down the street.\"" },
-      { q: "Name the kind: \"Shut the window.\"", a: "Imperative — it gives a command." },
+      { q: "Is this a complete sentence? - \"Running down the street\"", a: "No. It has no subject and no complete thought. A complete version: \"The boy was running down the street.\"" },
+      { q: "Name the kind: \"Shut the window.\"", a: "Imperative - it gives a command." },
     ],
   },
   {
@@ -87,13 +87,13 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
       {
         heading: "Abstract nouns",
-        body: "An abstract noun is the name of a quality, feeling, or idea — something we cannot touch or see.",
+        body: "An abstract noun is the name of a quality, feeling, or idea - something we cannot touch or see.",
         examples: ["honesty, kindness, courage, childhood"],
       },
     ],
     practice: [
-      { q: "Common or proper? — \"mountain\" and \"Himalayas\"", a: "\"mountain\" is a common noun; \"Himalayas\" is a proper noun." },
-      { q: "Pick the abstract noun: book, bravery, table.", a: "bravery — it names a quality you cannot touch." },
+      { q: "Common or proper? - \"mountain\" and \"Himalayas\"", a: "\"mountain\" is a common noun; \"Himalayas\" is a proper noun." },
+      { q: "Pick the abstract noun: book, bravery, table.", a: "bravery - it names a quality you cannot touch." },
     ],
   },
   {
@@ -183,7 +183,7 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
     sections: [
       {
         heading: "What adjectives do",
-        body: "An adjective adds something to the meaning of a noun — its quality, quantity, or number.",
+        body: "An adjective adds something to the meaning of a noun - its quality, quantity, or number.",
         examples: ["a tall tree", "some water", "five mangoes"],
       },
       {
@@ -214,7 +214,7 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
     ],
     practice: [
-      { q: "Find the verb: \"The children played in the park.\"", a: "\"played\" — it shows the action." },
+      { q: "Find the verb: \"The children played in the park.\"", a: "\"played\" - it shows the action." },
     ],
   },
   {
@@ -234,13 +234,13 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
     ],
     practice: [
-      { q: "Find the adverb: \"The tortoise moved slowly.\"", a: "\"slowly\" — it tells how the tortoise moved." },
+      { q: "Find the adverb: \"The tortoise moved slowly.\"", a: "\"slowly\" - it tells how the tortoise moved." },
     ],
   },
   {
     id: "prepositions",
     title: "Prepositions",
-    summary: "A preposition shows how a noun or pronoun is related to another word — often place or time.",
+    summary: "A preposition shows how a noun or pronoun is related to another word - often place or time.",
     sections: [
       {
         heading: "Prepositions of place",
@@ -254,7 +254,7 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
     ],
     practice: [
-      { q: "Choose: \"School starts ___ 8 a.m.\" (at / on / in)", a: "at — we use \"at\" with clock time." },
+      { q: "Choose: \"School starts ___ 8 a.m.\" (at / on / in)", a: "at - we use \"at\" with clock time." },
     ],
   },
   {
@@ -289,13 +289,13 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
     ],
     practice: [
-      { q: "Add an interjection: \"___! The vase is broken.\"", a: "Any of: Oh! / Alas! / Oops! — each shows sudden feeling." },
+      { q: "Add an interjection: \"___! The vase is broken.\"", a: "Any of: Oh! / Alas! / Oops! - each shows sudden feeling." },
     ],
   },
   {
     id: "tenses",
     title: "Tenses",
-    summary: "Tense tells us the time of an action — present, past, or future.",
+    summary: "Tense tells us the time of an action - present, past, or future.",
     sections: [
       {
         heading: "The three times",
@@ -314,7 +314,7 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
   },
   {
     id: "agreement",
-    title: "Subject–Verb Agreement",
+    title: "Subject-Verb Agreement",
     summary: "The verb must agree with its subject in number.",
     sections: [
       {
@@ -329,7 +329,7 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
     ],
     practice: [
-      { q: "Choose: \"One of the windows (is / are) open.\"", a: "is — the subject is \"One\" (singular), not \"windows\"." },
+      { q: "Choose: \"One of the windows (is / are) open.\"", a: "is - the subject is \"One\" (singular), not \"windows\"." },
     ],
   },
   {
@@ -409,7 +409,7 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
     ],
     practice: [
-      { q: "Choose: \"(Your / You're) going to love this.\"", a: "You're — it means \"you are\"." },
+      { q: "Choose: \"(Your / You're) going to love this.\"", a: "You're - it means \"you are\"." },
     ],
   },
   {
@@ -449,7 +449,7 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
       },
     ],
     practice: [
-      { q: "Read: \"The library now opens on weekends, and visits rose by a third.\" Did the change help?", a: "Yes — more people visited after the new weekend hours, so it helped." },
+      { q: "Read: \"The library now opens on weekends, and visits rose by a third.\" Did the change help?", a: "Yes - more people visited after the new weekend hours, so it helped." },
     ],
   },
   {
@@ -477,15 +477,15 @@ export const ENGLISH_LESSONS: EnglishLesson[] = [
 export const MATH_BANDS: GradeBand[] = [
   {
     id: "g1-2",
-    grade: "Grades 1–2",
-    ages: "Ages 6–8",
-    book: "NCERT Math-Magic (Class 1–2)",
+    grade: "Grades 1-2",
+    ages: "Ages 6-8",
+    book: "NCERT Math-Magic (Class 1-2)",
     topics: [
       { title: "Counting & number names", explanation: "We count things one by one and learn the order of numbers up to 100. The number just after is one more; the number just before is one less.", example: "After 7 comes 8 (one more). Before 7 comes 6 (one less).", practice: [{ q: "What is one more than 9?", a: "10." }] },
       { title: "Place value (tens & ones)", explanation: "A two-digit number is made of tens and ones. The left digit shows tens, the right digit shows ones.", example: "34 = 3 tens + 4 ones = 30 + 4.", practice: [{ q: "How many tens and ones are in 52?", a: "5 tens and 2 ones." }] },
       { title: "Addition", explanation: "Addition means putting groups together to find how many in all. The symbol is +.", example: "3 apples + 2 apples = 5, so 3 + 2 = 5.", practice: [{ q: "Add: 6 + 5", a: "11." }] },
       { title: "Subtraction", explanation: "Subtraction means taking away to find how many are left. The symbol is −.", example: "You have 5 toffees and eat 2. Left = 5 − 2 = 3.", practice: [{ q: "Subtract: 8 − 3", a: "5." }] },
-      { title: "Shapes around us", explanation: "We name flat shapes by their sides and corners — circle, triangle, square, rectangle.", example: "A square has 4 equal sides and 4 corners; a triangle has 3 sides.", practice: [{ q: "How many corners does a triangle have?", a: "3 corners." }] },
+      { title: "Shapes around us", explanation: "We name flat shapes by their sides and corners - circle, triangle, square, rectangle.", example: "A square has 4 equal sides and 4 corners; a triangle has 3 sides.", practice: [{ q: "How many corners does a triangle have?", a: "3 corners." }] },
       { title: "Patterns", explanation: "A pattern repeats in a fixed way. We find the rule and continue it.", example: "2, 4, 6, 8, … the rule is +2, so next is 10.", practice: [{ q: "Continue: 5, 10, 15, __", a: "20 (rule is +5)." }] },
       { title: "Money", explanation: "We add and subtract rupees to pay and get change.", example: "A pen costs ₹7. You pay ₹10. Change = 10 − 7 = ₹3.", practice: [{ q: "You buy a ₹4 sweet with a ₹5 coin. Change?", a: "₹1." }] },
       { title: "Telling time", explanation: "A clock has an hour hand and a minute hand. We read o'clock and half past.", example: "When the long hand points to 12 and the short hand to 3, it is 3 o'clock.", practice: [{ q: "The hands show the short hand on 6 and long hand on 12. What time is it?", a: "6 o'clock." }] },
@@ -493,9 +493,9 @@ export const MATH_BANDS: GradeBand[] = [
   },
   {
     id: "g3-4",
-    grade: "Grades 3–4",
-    ages: "Ages 8–10",
-    book: "NCERT Math-Magic (Class 3–4)",
+    grade: "Grades 3-4",
+    ages: "Ages 8-10",
+    book: "NCERT Math-Magic (Class 3-4)",
     topics: [
       { title: "Multiplication tables", explanation: "Multiplication is repeated addition. The tables (2 to 10) help us add equal groups quickly.", example: "4 × 3 means 3 groups of 4: 4 + 4 + 4 = 12.", practice: [{ q: "What is 6 × 3?", a: "18." }] },
       { title: "Division", explanation: "Division means sharing equally into groups. The symbol is ÷.", example: "12 sweets shared among 3 children: 12 ÷ 3 = 4 each.", practice: [{ q: "Share 15 among 5 equally.", a: "15 ÷ 5 = 3 each." }] },
@@ -508,9 +508,9 @@ export const MATH_BANDS: GradeBand[] = [
   },
   {
     id: "g5-6",
-    grade: "Grades 5–6",
-    ages: "Ages 10–12",
-    book: "NCERT Mathematics (Class 5–6)",
+    grade: "Grades 5-6",
+    ages: "Ages 10-12",
+    book: "NCERT Mathematics (Class 5-6)",
     topics: [
       { title: "Fractions & decimals", explanation: "Decimals are another way to write fractions with tenths, hundredths, and so on. The dot is the decimal point.", example: "1/2 = 0.5, and 3/4 = 0.75.", practice: [{ q: "Write 1/4 as a decimal.", a: "0.25." }] },
       { title: "Factors & multiples", explanation: "A factor divides a number exactly. A multiple is the result of multiplying by whole numbers.", example: "Factors of 6: 1, 2, 3, 6. Multiples of 6: 6, 12, 18, 24…", practice: [{ q: "List the factors of 12.", a: "1, 2, 3, 4, 6, 12." }] },
@@ -523,9 +523,9 @@ export const MATH_BANDS: GradeBand[] = [
   },
   {
     id: "g7-8",
-    grade: "Grades 7–8",
-    ages: "Ages 12–14",
-    book: "NCERT Mathematics (Class 7–8)",
+    grade: "Grades 7-8",
+    ages: "Ages 12-14",
+    book: "NCERT Mathematics (Class 7-8)",
     topics: [
       { title: "Integers", explanation: "We add, subtract, and multiply positive and negative numbers using the number line and sign rules.", example: "−3 + 5 = 2; and −2 − 4 = −6.", practice: [{ q: "Solve: −5 + 8.", a: "3." }] },
       { title: "Algebraic expressions", explanation: "Algebra uses letters (variables) for numbers. We combine like terms to simplify.", example: "3x + 2x = 5x; and 4a + 3 − a = 3a + 3.", practice: [{ q: "Simplify: 5x − 2x + 3.", a: "3x + 3." }] },
@@ -539,9 +539,9 @@ export const MATH_BANDS: GradeBand[] = [
   },
   {
     id: "g9-10",
-    grade: "Grades 9–10",
-    ages: "Ages 14–16",
-    book: "NCERT Mathematics (Class 9–10)",
+    grade: "Grades 9-10",
+    ages: "Ages 14-16",
+    book: "NCERT Mathematics (Class 9-10)",
     topics: [
       { title: "Polynomials", explanation: "A polynomial has terms like ax² + bx + c. We add, subtract, and factorise them.", example: "x² + 5x + 6 = (x + 2)(x + 3).", practice: [{ q: "Factorise: x² + 6x + 8.", a: "(x + 2)(x + 4)." }] },
       { title: "Linear equations in two variables", explanation: "An equation like ax + by = c has many solutions forming a line. Two such equations can be solved together.", example: "x + y = 10 and x − y = 4 give x = 7, y = 3.", practice: [{ q: "Solve x + y = 7, x − y = 1.", a: "x = 4, y = 3." }] },
@@ -558,21 +558,21 @@ export const MATH_BANDS: GradeBand[] = [
 export const SCIENCE_BANDS: GradeBand[] = [
   {
     id: "s1-2",
-    grade: "Grades 1–2",
-    ages: "Ages 6–8",
-    book: "NCERT Science (Class 1–2)",
+    grade: "Grades 1-2",
+    ages: "Ages 6-8",
+    book: "NCERT Science (Class 1-2)",
     topics: [
-      { title: "Living and non-living", explanation: "Living things grow, eat, breathe, and move on their own. Non-living things do not.", example: "A plant and a dog are living; a stone and a chair are non-living.", practice: [{ q: "Living or non-living: a fish?", a: "Living — it grows, eats, and moves." }] },
+      { title: "Living and non-living", explanation: "Living things grow, eat, breathe, and move on their own. Non-living things do not.", example: "A plant and a dog are living; a stone and a chair are non-living.", practice: [{ q: "Living or non-living: a fish?", a: "Living - it grows, eats, and moves." }] },
       { title: "Plants around us", explanation: "Plants have roots, a stem, leaves, and often flowers. They make their own food using sunlight.", example: "Roots hold the plant and drink water; leaves catch sunlight.", practice: [{ q: "Which part of a plant holds it in the soil?", a: "The roots." }] },
-      { title: "Our body", explanation: "We use our five senses — sight, hearing, smell, taste, and touch — to learn about the world.", example: "We see with our eyes and hear with our ears.", practice: [{ q: "Which sense do we use to enjoy music?", a: "Hearing (ears)." }] },
-      { title: "Weather & seasons", explanation: "Weather is how it is outside — sunny, rainy, or windy. The main seasons are summer, the rainy season, and winter.", example: "We carry an umbrella in the rainy season.", practice: [{ q: "Which season is the hottest?", a: "Summer." }] },
+      { title: "Our body", explanation: "We use our five senses - sight, hearing, smell, taste, and touch - to learn about the world.", example: "We see with our eyes and hear with our ears.", practice: [{ q: "Which sense do we use to enjoy music?", a: "Hearing (ears)." }] },
+      { title: "Weather & seasons", explanation: "Weather is how it is outside - sunny, rainy, or windy. The main seasons are summer, the rainy season, and winter.", example: "We carry an umbrella in the rainy season.", practice: [{ q: "Which season is the hottest?", a: "Summer." }] },
     ],
   },
   {
     id: "s3-4",
-    grade: "Grades 3–4",
-    ages: "Ages 8–10",
-    book: "NCERT Science (Class 3–4)",
+    grade: "Grades 3-4",
+    ages: "Ages 8-10",
+    book: "NCERT Science (Class 3-4)",
     topics: [
       { title: "Parts of a plant", explanation: "Each plant part has a job: roots absorb water, the stem carries it, leaves make food, and flowers make seeds.", example: "A mango tree's leaves make food; its flowers become mangoes with seeds.", practice: [{ q: "Which part makes the plant's food?", a: "The leaves." }] },
       { title: "Animals and their food", explanation: "Herbivores eat plants, carnivores eat other animals, and omnivores eat both.", example: "A cow is a herbivore; a tiger is a carnivore; a crow is an omnivore.", practice: [{ q: "What do we call an animal that eats only plants?", a: "A herbivore." }] },
@@ -582,9 +582,9 @@ export const SCIENCE_BANDS: GradeBand[] = [
   },
   {
     id: "s5-6",
-    grade: "Grades 5–6",
-    ages: "Ages 10–12",
-    book: "NCERT Science (Class 5–6)",
+    grade: "Grades 5-6",
+    ages: "Ages 10-12",
+    book: "NCERT Science (Class 5-6)",
     topics: [
       { title: "The human body", explanation: "Organs work in systems. The digestive system breaks down food; the respiratory system takes in oxygen.", example: "We breathe in oxygen with our lungs and breathe out carbon dioxide.", practice: [{ q: "Which organ helps us breathe?", a: "The lungs." }] },
       { title: "Food & nutrition", explanation: "A balanced diet has carbohydrates for energy, proteins for growth, fats, vitamins, and minerals.", example: "Rice gives energy; dal and eggs give protein for growth.", practice: [{ q: "Which nutrient mainly helps the body grow?", a: "Protein." }] },
@@ -594,26 +594,26 @@ export const SCIENCE_BANDS: GradeBand[] = [
   },
   {
     id: "s7-8",
-    grade: "Grades 7–8",
-    ages: "Ages 12–14",
-    book: "NCERT Science (Class 7–8)",
+    grade: "Grades 7-8",
+    ages: "Ages 12-14",
+    book: "NCERT Science (Class 7-8)",
     topics: [
       { title: "Photosynthesis", explanation: "Green plants make food in their leaves using sunlight, water, and carbon dioxide, giving out oxygen.", example: "Sunlight + water + CO₂ → glucose (food) + oxygen.", practice: [{ q: "What gas do plants release during photosynthesis?", a: "Oxygen." }] },
       { title: "Cells", explanation: "The cell is the basic unit of life. Plant cells have a cell wall; animal cells do not.", example: "Your body is made of trillions of tiny cells.", practice: [{ q: "Which feature do plant cells have that animal cells lack?", a: "A cell wall." }] },
       { title: "Force & motion", explanation: "A force is a push or a pull. It can start, stop, speed up, slow down, or change the direction of motion.", example: "Kicking a ball applies a force that makes it move.", practice: [{ q: "Name a force that slows a moving object down.", a: "Friction." }] },
-      { title: "Electric current", explanation: "Electric current flows in a closed circuit. A switch opens or closes the path.", example: "A bulb lights only when the circuit is closed (switch on).", practice: [{ q: "Will a bulb glow if the circuit is open?", a: "No — current cannot flow in an open circuit." }] },
+      { title: "Electric current", explanation: "Electric current flows in a closed circuit. A switch opens or closes the path.", example: "A bulb lights only when the circuit is closed (switch on).", practice: [{ q: "Will a bulb glow if the circuit is open?", a: "No - current cannot flow in an open circuit." }] },
       { title: "Acids & bases", explanation: "Acids taste sour, bases taste bitter and feel soapy. An indicator like litmus tells them apart.", example: "Lemon juice is acidic (turns blue litmus red); soap is basic.", practice: [{ q: "What colour does blue litmus turn in an acid?", a: "Red." }] },
     ],
   },
   {
     id: "s9-10",
-    grade: "Grades 9–10",
-    ages: "Ages 14–16",
-    book: "NCERT Science (Class 9–10)",
+    grade: "Grades 9-10",
+    ages: "Ages 14-16",
+    book: "NCERT Science (Class 9-10)",
     topics: [
-      { title: "Atoms & molecules", explanation: "All matter is made of atoms. Atoms join to form molecules; a chemical formula shows how many of each.", example: "Water is H₂O — two hydrogen atoms and one oxygen atom.", practice: [{ q: "How many atoms are in one molecule of CO₂?", a: "Three — one carbon and two oxygen." }] },
+      { title: "Atoms & molecules", explanation: "All matter is made of atoms. Atoms join to form molecules; a chemical formula shows how many of each.", example: "Water is H₂O - two hydrogen atoms and one oxygen atom.", practice: [{ q: "How many atoms are in one molecule of CO₂?", a: "Three - one carbon and two oxygen." }] },
       { title: "Newton's laws of motion", explanation: "An object stays at rest or moves steadily unless a force acts (1st law). Force = mass × acceleration (2nd law). Every action has an equal, opposite reaction (3rd law).", example: "A rocket pushes gas down, and the gas pushes the rocket up (3rd law).", practice: [{ q: "Find the force: mass 2 kg, acceleration 3 m/s².", a: "F = m × a = 2 × 3 = 6 N." }] },
-      { title: "Chemical reactions", explanation: "In a reaction, substances change into new ones. Matter is conserved — atoms are rearranged, not lost.", example: "Iron + oxygen → rust (iron oxide).", practice: [{ q: "In a balanced reaction, is the total mass before and after the same?", a: "Yes — mass is conserved." }] },
+      { title: "Chemical reactions", explanation: "In a reaction, substances change into new ones. Matter is conserved - atoms are rearranged, not lost.", example: "Iron + oxygen → rust (iron oxide).", practice: [{ q: "In a balanced reaction, is the total mass before and after the same?", a: "Yes - mass is conserved." }] },
       { title: "Life processes", explanation: "Living things carry out nutrition, respiration, transport, and excretion to stay alive.", example: "Respiration releases energy from food: glucose + oxygen → energy + CO₂ + water.", practice: [{ q: "Which life process releases energy from food?", a: "Respiration." }] },
       { title: "Electricity & circuits", explanation: "Voltage drives current through resistance. Ohm's law links them: V = I × R.", example: "If V = 12 V and R = 4 Ω, then I = V/R = 12/4 = 3 A.", practice: [{ q: "Find the current: V = 10 V, R = 5 Ω.", a: "I = V/R = 10/5 = 2 A." }] },
     ],
@@ -629,14 +629,14 @@ export const CODING_LESSONS: EnglishLesson[] = [
       { heading: "Instructions for a computer", body: "Computers cannot think for themselves. They follow the exact instructions we write, called code.", examples: ["A recipe is like code for cooking.", "\"Turn on the light\" is one instruction."] },
       { heading: "Be exact", body: "A computer does exactly what you say, not what you mean. A small mistake gives a wrong result.", examples: ["Say \"add 2 and 3\", not just \"add some numbers\"."] },
     ],
-    practice: [{ q: "Why must instructions be exact?", a: "The computer follows them literally — it cannot guess what you meant." }],
+    practice: [{ q: "Why must instructions be exact?", a: "The computer follows them literally - it cannot guess what you meant." }],
   },
   {
     id: "code-sequence",
     title: "Step by Step (Sequencing)",
     summary: "Sequencing means the computer runs steps in order, one after another.",
     sections: [
-      { heading: "Order matters", body: "Steps happen from top to bottom. The wrong order gives the wrong result.", examples: ["1) Put on socks  2) Put on shoes — not the other way!"] },
+      { heading: "Order matters", body: "Steps happen from top to bottom. The wrong order gives the wrong result.", examples: ["1) Put on socks  2) Put on shoes - not the other way!"] },
       { heading: "A simple sequence", body: "Each line runs after the one before it.", examples: ["1) get bread  2) add butter  3) eat"] },
     ],
     practice: [{ q: "Put in order: \"eat\", \"cook\", \"buy vegetables\".", a: "buy vegetables → cook → eat." }],
@@ -659,7 +659,7 @@ export const CODING_LESSONS: EnglishLesson[] = [
       { heading: "Input", body: "Input is data the program receives, often from the user.", examples: ["A number you type in", "A button you click"] },
       { heading: "Output", body: "Output is what the program shows or returns.", examples: ["print(\"Hello!\")  shows Hello! on the screen"] },
     ],
-    practice: [{ q: "Is typing your name input or output?", a: "Input — it goes into the program." }],
+    practice: [{ q: "Is typing your name input or output?", a: "Input - it goes into the program." }],
   },
   {
     id: "code-conditionals",
@@ -677,7 +677,7 @@ export const CODING_LESSONS: EnglishLesson[] = [
     summary: "A loop repeats a set of steps without writing them again and again.",
     sections: [
       { heading: "Why loops", body: "Loops let us do the same thing many times with little code.", examples: ["repeat 5 times: print \"hi\"   → prints hi five times"] },
-      { heading: "Be careful", body: "A loop with no stopping point runs forever — that is an infinite loop.", examples: ["Always make sure the loop can end."] },
+      { heading: "Be careful", body: "A loop with no stopping point runs forever - that is an infinite loop.", examples: ["Always make sure the loop can end."] },
     ],
     practice: [{ q: "How many times does \"repeat 3 times: clap\" clap?", a: "3 times." }],
   },
@@ -706,9 +706,9 @@ export const CODING_LESSONS: EnglishLesson[] = [
 export const SOCIAL_BANDS: GradeBand[] = [
   {
     id: "so1-2",
-    grade: "Grades 1–2",
-    ages: "Ages 6–8",
-    book: "NCERT EVS (Class 1–2)",
+    grade: "Grades 1-2",
+    ages: "Ages 6-8",
+    book: "NCERT EVS (Class 1-2)",
     topics: [
       { title: "My family", explanation: "A family is the people who live together and care for one another.", example: "Parents, brothers, sisters, and grandparents are part of a family.", practice: [{ q: "Name two members of a family.", a: "Any two: mother, father, sister, brother, grandparent." }] },
       { title: "Our neighbourhood", explanation: "Our neighbourhood is the places and people around our home.", example: "The shopkeeper, doctor, and teacher all help our neighbourhood.", practice: [{ q: "Who teaches children at school?", a: "A teacher." }] },
@@ -718,21 +718,21 @@ export const SOCIAL_BANDS: GradeBand[] = [
   },
   {
     id: "so3-4",
-    grade: "Grades 3–4",
-    ages: "Ages 8–10",
-    book: "NCERT EVS (Class 3–4)",
+    grade: "Grades 3-4",
+    ages: "Ages 8-10",
+    book: "NCERT EVS (Class 3-4)",
     topics: [
       { title: "States and capitals", explanation: "India is divided into states, and each state has a capital city.", example: "Telangana's capital is Hyderabad; Maharashtra's is Mumbai.", practice: [{ q: "What is the capital of Telangana?", a: "Hyderabad." }] },
       { title: "Maps & directions", explanation: "A map shows places from above. The four main directions are North, South, East, and West.", example: "The sun rises in the East and sets in the West.", practice: [{ q: "In which direction does the sun rise?", a: "East." }] },
-      { title: "People who help us", explanation: "Many people serve the community — doctors, farmers, police, and postmen.", example: "Farmers grow the food we eat every day.", practice: [{ q: "Who grows our food?", a: "Farmers." }] },
+      { title: "People who help us", explanation: "Many people serve the community - doctors, farmers, police, and postmen.", example: "Farmers grow the food we eat every day.", practice: [{ q: "Who grows our food?", a: "Farmers." }] },
       { title: "Transport & communication", explanation: "We travel by road, rail, water, and air, and we communicate by phone, post, and internet.", example: "A train runs on rails; a letter is sent by post.", practice: [{ q: "Name one way to communicate over a distance.", a: "Phone, letter/post, or email." }] },
     ],
   },
   {
     id: "so5-6",
-    grade: "Grades 5–6",
-    ages: "Ages 10–12",
-    book: "NCERT Social Science (Class 5–6)",
+    grade: "Grades 5-6",
+    ages: "Ages 10-12",
+    book: "NCERT Social Science (Class 5-6)",
     topics: [
       { title: "Continents & oceans", explanation: "The Earth has 7 continents and 5 oceans.", example: "Asia is the largest continent and the Pacific is the largest ocean. India is in Asia.", practice: [{ q: "Which continent is India in?", a: "Asia." }] },
       { title: "Rivers & mountains of India", explanation: "India has great rivers and high mountain ranges.", example: "The Ganga is a major river; the Himalayas are the highest mountains.", practice: [{ q: "Name the highest mountain range in India.", a: "The Himalayas." }] },
@@ -742,21 +742,21 @@ export const SOCIAL_BANDS: GradeBand[] = [
   },
   {
     id: "so7-8",
-    grade: "Grades 7–8",
-    ages: "Ages 12–14",
-    book: "NCERT Social Science (Class 7–8)",
+    grade: "Grades 7-8",
+    ages: "Ages 12-14",
+    book: "NCERT Social Science (Class 7-8)",
     topics: [
       { title: "Medieval India", explanation: "After ancient times, many kingdoms and empires ruled different parts of India.", example: "The Mughals built the Taj Mahal in Agra.", practice: [{ q: "Who built the Taj Mahal?", a: "The Mughal emperor Shah Jahan." }] },
       { title: "Climate & resources", explanation: "India has many climates and natural resources such as water, soil, and minerals.", example: "The monsoon brings the rain that farmers depend on.", practice: [{ q: "Which seasonal wind brings most of India's rain?", a: "The monsoon." }] },
-      { title: "Democracy & government", explanation: "India is a democracy — the people elect their leaders by voting.", example: "Citizens vote to choose their Members of Parliament.", practice: [{ q: "How do citizens choose leaders in a democracy?", a: "By voting in elections." }] },
+      { title: "Democracy & government", explanation: "India is a democracy - the people elect their leaders by voting.", example: "Citizens vote to choose their Members of Parliament.", practice: [{ q: "How do citizens choose leaders in a democracy?", a: "By voting in elections." }] },
       { title: "Sectors of work", explanation: "People earn a living through farming, industry, and services.", example: "A farmer (primary), a factory worker (secondary), a teacher (tertiary).", practice: [{ q: "Farming belongs to which sector?", a: "The primary sector." }] },
     ],
   },
   {
     id: "so9-10",
-    grade: "Grades 9–10",
-    ages: "Ages 14–16",
-    book: "NCERT Social Science (Class 9–10)",
+    grade: "Grades 9-10",
+    ages: "Ages 14-16",
+    book: "NCERT Social Science (Class 9-10)",
     topics: [
       { title: "India's freedom struggle", explanation: "India became free from British rule on 15 August 1947 after a long struggle.", example: "Mahatma Gandhi led non-violent movements such as the Salt March.", practice: [{ q: "On what date did India gain independence?", a: "15 August 1947." }] },
       { title: "Latitudes & longitudes", explanation: "Imaginary lines help us locate places on the globe. Latitudes run east-west; longitudes run north-south.", example: "The Equator is 0° latitude; the Prime Meridian is 0° longitude.", practice: [{ q: "What is the 0° latitude line called?", a: "The Equator." }] },

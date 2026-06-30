@@ -39,7 +39,7 @@ export default function ExportsPage() {
     {
       key: "sessions",
       label: "Sessions",
-      description: "Full session log — topic, weak area, engagement, and next step.",
+      description: "Full session log - topic, weak area, engagement, and next step.",
       rows: db.sessions.map((s) => ({
         id: s.id,
         date: s.date,
@@ -82,7 +82,7 @@ export default function ExportsPage() {
     {
       key: "research_dataset",
       label: "Research dataset",
-      description: "Rater-level rubric scores joined to prompt condition — ready for analysis.",
+      description: "Rater-level rubric scores joined to prompt condition - ready for analysis.",
       rows: db.scores.map((r) => {
         const p = db.problems.find((x) => x.id === r.problemId);
         return {

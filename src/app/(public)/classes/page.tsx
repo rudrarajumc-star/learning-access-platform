@@ -3,7 +3,7 @@ import ClassesClient from "./ClassesClient";
 
 export const metadata = {
   title: "Free Classes",
-  description: "Live, free small-group classes every week — math, reading, and English. Reserve a seat.",
+  description: "Live, free small-group classes every week - math, reading, and English. Reserve a seat.",
 };
 
 export default function ClassesPage() {

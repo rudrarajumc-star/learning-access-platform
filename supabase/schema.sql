@@ -1,8 +1,3 @@
--- Learning Access Platform — PostgreSQL / Supabase schema
--- Run in the Supabase SQL editor to provision the database. The seeded demo
--- data layer (src/lib/seed.ts) mirrors these tables so the UI is unchanged
--- when you switch from demo data to a live database.
-
 create extension if not exists "pgcrypto";
 
 create table if not exists centers (
@@ -25,7 +20,7 @@ create table if not exists tutors (
   created_at   timestamptz default now()
 );
 
--- Store anonymized codes only — no raw PII.
+-- Store anonymized codes only - no raw PII.
 create table if not exists students (
   id                 text primary key,      -- anonymized code, e.g. HYD-014
   grade_level        int,

@@ -1,4 +1,3 @@
-// Admin session gate. Set LA_ACCESS_CODE and LA_SESSION_SECRET in env for production.
 export const SESSION_COOKIE = "la_session";
 
 export const SESSION_VALUE = process.env.LA_SESSION_SECRET || "la.s3ssion.k9f2qd";

@@ -66,7 +66,7 @@ const topics: Topic[] = topicSeed.map(([subject, name, gradeBand, difficulty], i
 const languages = ["Telugu", "Telugu", "Telugu", "Hindi", "Tamil"];
 const englishLevels: EnglishLevel[] = ["Emerging", "Developing", "Proficient"];
 const students: Student[] = [];
-const perCenter = [42, 36, 26]; // 104 students total
+const perCenter = [42, 36, 26]
 centers.forEach((center, ci) => {
   for (let n = 1; n <= perCenter[ci]; n++) {
     const baselineMath = between(38, 70);
@@ -107,7 +107,7 @@ const noteTemplates = [
   "Good progress on the core skill; needs more reps with mixed examples.",
   "Confused two related concepts early, then self-corrected by the end.",
   "Strong engagement; ready to move to the next difficulty band.",
-  "Language load was high — broke the problem into smaller steps.",
+  "Language load was high - broke the problem into smaller steps.",
 ];
 const nextSteps = [
   "Assign 5 scaffolded practice problems.",
@@ -119,7 +119,6 @@ const nextSteps = [
 
 const sessions: Session[] = [];
 let sid = 1;
-// ~14 weeks of sessions ending today (2026-06-23)
 const endDate = new Date("2026-06-23");
 const activeStudents = students.filter((s) => s.status !== "graduated");
 for (let week = 0; week < 14; week++) {
@@ -188,7 +187,7 @@ let pid = 1;
 topics.forEach((topic) => {
   const base = sampleProblems[topic.name] ?? {
     p: `Practice item for ${topic.name}.`,
-    a: "—",
+    a: "-",
     e: "Worked solution provided to the tutor.",
   };
   promptConditions.forEach((cond) => {
@@ -209,8 +208,6 @@ topics.forEach((topic) => {
   });
 });
 
-// Each prompt condition has a characteristic quality profile — this is the
-// signal the research page surfaces.
 const conditionProfile: Record<PromptCondition, Partial<Record<keyof RubricScore, number>>> = {
   basic: { clarity: 3.7, difficultyFit: 3.2, tutorUsefulness: 3.4, culturalAccessibility: 3.5, correctness: 4.4 },
   grade_level: { clarity: 4.0, difficultyFit: 4.1, tutorUsefulness: 3.8, culturalAccessibility: 3.7, correctness: 4.5 },

@@ -15,25 +15,33 @@ import {
   type QuizQ,
 } from "./content";
 
+const STORAGE_KEY = "lap_done";
+
+function readProgress(): string[] {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    return Array.isArray(saved) ? saved : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeProgress(ids: string[]) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(ids));
+  } catch {
+    return;
+  }
+}
+
 function useDone() {
   const [done, setDone] = useState<string[]>([]);
-  useEffect(() => {
-    try {
-      const v = JSON.parse(localStorage.getItem("lap_done") || "[]");
-      if (Array.isArray(v)) setDone(v);
-    } catch {
-      /* ignore */
-    }
-  }, []);
+  useEffect(() => setDone(readProgress()), []);
   const toggle = (id: string) =>
-    setDone((d) => {
-      const n = d.includes(id) ? d.filter((x) => x !== id) : [...d, id];
-      try {
-        localStorage.setItem("lap_done", JSON.stringify(n));
-      } catch {
-        /* ignore */
-      }
-      return n;
+    setDone((current) => {
+      const next = current.includes(id) ? current.filter((other) => other !== id) : [...current, id];
+      writeProgress(next);
+      return next;
     });
   return { done, toggle };
 }

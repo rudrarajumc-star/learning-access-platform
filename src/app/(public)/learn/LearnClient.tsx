@@ -23,27 +23,22 @@ const catColor: Record<Cat, string> = {
 };
 
 const RESOURCES: Resource[] = [
-  // Math
-  { name: "Khan Academy — Math", url: "https://www.khanacademy.org/math", cat: "Math", free: "100% free", blurb: "Every math topic from counting to calculus, with practice and videos. Our go-to." },
-  { name: "Khan Academy Kids", url: "https://learn.khanacademy.org/khan-academy-kids/", cat: "Math", free: "Free app", blurb: "Playful early math and reading for younger learners (ages 2–8)." },
+  { name: "Khan Academy - Math", url: "https://www.khanacademy.org/math", cat: "Math", free: "100% free", blurb: "Every math topic from counting to calculus, with practice and videos. Our go-to." },
+  { name: "Khan Academy Kids", url: "https://learn.khanacademy.org/khan-academy-kids/", cat: "Math", free: "Free app", blurb: "Playful early math and reading for younger learners (ages 2-8)." },
   { name: "Desmos", url: "https://www.desmos.com/calculator", cat: "Math", free: "Free", blurb: "A beautiful graphing calculator. Make equations come alive." },
   { name: "Prodigy Math", url: "https://www.prodigygame.com", cat: "Math", free: "Free to play", blurb: "Math practice disguised as a game. Kids forget they're studying." },
-  // Reading & English
-  { name: "Khan Academy — Reading & Grammar", url: "https://www.khanacademy.org/ela", cat: "Reading", free: "100% free", blurb: "Reading comprehension and grammar, organized by grade." },
+  { name: "Khan Academy - Reading & Grammar", url: "https://www.khanacademy.org/ela", cat: "Reading", free: "100% free", blurb: "Reading comprehension and grammar, organized by grade." },
   { name: "CommonLit", url: "https://www.commonlit.org", cat: "Reading", free: "Free", blurb: "Thousands of reading passages with questions, by reading level." },
   { name: "ReadTheory", url: "https://readtheory.org", cat: "Reading", free: "Free", blurb: "Adapts to the reader and builds comprehension at the right level." },
   { name: "Storyline Online", url: "https://www.storylineonline.net", cat: "Reading", free: "Free", blurb: "Famous actors read picture books aloud. Great for new readers." },
-  // English for new speakers
   { name: "Duolingo", url: "https://www.duolingo.com", cat: "English (new speakers)", free: "Free", blurb: "Learn English in short daily lessons, from many home languages." },
   { name: "BBC Learning English", url: "https://www.bbc.co.uk/learningenglish", cat: "English (new speakers)", free: "Free", blurb: "Videos, vocabulary and grammar built for English learners." },
   { name: "USA Learns", url: "https://www.usalearns.org", cat: "English (new speakers)", free: "Free", blurb: "Full English courses for adults and older students. No account needed to start." },
   { name: "VOA Learning English", url: "https://learningenglish.voanews.com", cat: "English (new speakers)", free: "Free", blurb: "News and stories read slowly, in clear and simple English." },
-  // Science
   { name: "PhET Simulations", url: "https://phet.colorado.edu", cat: "Science", free: "Free", blurb: "Interactive science and math simulations from the University of Colorado." },
-  { name: "Khan Academy — Science", url: "https://www.khanacademy.org/science", cat: "Science", free: "100% free", blurb: "Biology, chemistry, physics and more, explained simply." },
+  { name: "Khan Academy - Science", url: "https://www.khanacademy.org/science", cat: "Science", free: "100% free", blurb: "Biology, chemistry, physics and more, explained simply." },
   { name: "NASA Kids' Club", url: "https://www.nasa.gov/kidsclub/index.html", cat: "Science", free: "Free", blurb: "Space, games and real NASA science for curious kids." },
   { name: "National Geographic Kids", url: "https://kids.nationalgeographic.com", cat: "Science", free: "Free", blurb: "Animals, nature and the world, packed with photos and facts." },
-  // Free books
   { name: "StoryWeaver", url: "https://storyweaver.org.in", cat: "Free books", free: "Free · multilingual", blurb: "Thousands of children's books in Telugu, Hindi, English and 300+ languages. Made in India." },
   { name: "Open Library", url: "https://openlibrary.org", cat: "Free books", free: "Free", blurb: "Borrow millions of books for free from the Internet Archive." },
   { name: "Project Gutenberg", url: "https://www.gutenberg.org", cat: "Free books", free: "Free", blurb: "70,000+ classic books you can read or download, no cost." },

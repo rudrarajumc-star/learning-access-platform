@@ -106,7 +106,7 @@ export default function Home() {
 
       <Link href="/learn" className="group block overflow-hidden border-b border-border bg-surface py-7">
         <div className="mx-auto mb-3 max-w-6xl px-5 text-center text-xs font-medium uppercase tracking-wider text-ink-faint">
-          Free tools our tutors point students to — tap to explore
+          Free tools our tutors point students to - tap to explore
         </div>
         <div className="relative [mask-image:linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
           <div className="marquee gap-12 pr-12">
@@ -157,7 +157,7 @@ export default function Home() {
                 </h2>
                 <p className="mt-2 text-ink-soft">
                   Grammar lessons in the style of Wren &amp; Martin, and math by age group following
-                  the NCERT syllabus — with a worked example for every topic.
+                  the NCERT syllabus - with a worked example for every topic.
                 </p>
                 <ul className="mt-4 space-y-1.5 text-sm text-ink-soft">
                   {["Read full lessons right in the page", "Math sorted by your age group", "Worked examples, no account"].map((b) => (

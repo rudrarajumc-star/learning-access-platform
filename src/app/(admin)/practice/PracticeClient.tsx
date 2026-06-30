@@ -128,9 +128,6 @@ function Generator({
 
   const generate = () => {
     setBusy(true);
-    // Drafts a new item under the chosen prompt condition and drops it into the
-    // bank so it can be edited and scored. Wire this to your model endpoint to
-    // pull real generations; the tagging stays the same either way.
     setTimeout(() => {
       onGenerate({
         id: `P-${Math.floor(1000 + Math.random() * 8999)}`,

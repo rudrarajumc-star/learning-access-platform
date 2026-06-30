@@ -28,10 +28,10 @@ export default function Progress() {
 
   useEffect(() => {
     try {
-      const v = JSON.parse(localStorage.getItem("lap_done") || "[]");
-      if (Array.isArray(v)) setDone(v);
+      const saved = JSON.parse(localStorage.getItem("lap_done") || "[]");
+      setDone(Array.isArray(saved) ? saved : []);
     } catch {
-      /* ignore */
+      setDone([]);
     }
     setMounted(true);
   }, []);
@@ -63,7 +63,7 @@ export default function Progress() {
         </div>
         <div className="text-center sm:text-left">
           <h2 className="text-xl font-bold text-ink">
-            {overall === 0 ? "Let's get started" : overall === 100 ? "You finished everything! 🎉" : "Keep going — you've got this"}
+            {overall === 0 ? "Let's get started" : overall === 100 ? "You finished everything! 🎉" : "Keep going - you've got this"}
           </h2>
           <p className="mt-1 max-w-md text-ink-soft">
             This is everything you&apos;ve completed across all five subjects. It&apos;s saved on this

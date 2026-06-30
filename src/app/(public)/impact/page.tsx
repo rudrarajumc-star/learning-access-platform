@@ -2,7 +2,7 @@ import { kpis, studentsByCenter } from "@/lib/queries";
 
 export const metadata = {
   title: "Impact",
-  description: "The numbers behind our free tutoring — students reached, sessions, hours, and score gains, from real data.",
+  description: "The numbers behind our free tutoring - students reached, sessions, hours, and score gains, from real data.",
 };
 
 export default function ImpactPage() {
@@ -23,7 +23,7 @@ export default function ImpactPage() {
       <div className="text-xs font-semibold uppercase tracking-wider text-brand">Impact</div>
       <h1 className="mt-2 text-3xl font-bold text-ink">Numbers we can defend.</h1>
       <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-        Every figure here is computed from the live platform database — not a slide. Improvement is
+        Every figure here is computed from the live platform database - not a slide. Improvement is
         measured as the change from each learner&apos;s baseline assessment to their current score.
       </p>
 

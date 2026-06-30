@@ -13,7 +13,7 @@ export default function LgbtqPage() {
     },
     {
       name: "iCALL (TISS)",
-      detail: "Call 9152987821, Mon–Sat, 8am–10pm. Counsellors who support LGBTQ+ callers.",
+      detail: "Call 9152987821, Mon-Sat, 8am-10pm. Counsellors who support LGBTQ+ callers.",
     },
     {
       name: "Vandrevala Foundation",

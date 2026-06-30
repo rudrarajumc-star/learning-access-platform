@@ -14,11 +14,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://learningaccessiniti
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Learning Access Initiative — Free tutoring, lessons & classes",
+    default: "Learning Access Initiative - Free tutoring, lessons & classes",
     template: "%s · Learning Access Initiative",
   },
   description:
-    "Free tutoring, live classes, English & math lessons, and learning resources for multilingual students — plus the system we use to measure whether it's working.",
+    "Free tutoring, live classes, English & math lessons, and learning resources for multilingual students - plus the system we use to measure whether it's working.",
   keywords: [
     "free tutoring",
     "English grammar lessons",

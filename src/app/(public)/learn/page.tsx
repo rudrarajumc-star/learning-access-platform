@@ -2,7 +2,7 @@ import Link from "next/link";
 import LearnClient from "./LearnClient";
 
 export const metadata = {
-  title: "Learn — Free Resources",
+  title: "Learn - Free Resources",
   description: "The best free places to learn online, from Khan Academy to free books in your own language.",
 };
 

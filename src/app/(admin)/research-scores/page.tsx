@@ -13,7 +13,7 @@ export default function ResearchPage() {
     <div>
       <PageHeader
         title="Research scores"
-        subtitle={`Beyond Student Labels — does prompt wording change AI practice-problem quality? n = ${db.scores.length} rubric ratings.`}
+        subtitle={`Beyond Student Labels - does prompt wording change AI practice-problem quality? n = ${db.scores.length} rubric ratings.`}
       />
 
       <div className="grid gap-4 lg:grid-cols-3">
@@ -23,7 +23,7 @@ export default function ResearchPage() {
             <span className="font-medium text-ink">Finding:</span> the{" "}
             <span className="font-medium text-brand">{best.label}</span> condition scores highest
             overall ({best.overall}/5). Language-aware prompts (Multilingual, Simple English)
-            consistently beat the Basic baseline on clarity and cultural accessibility — the
+            consistently beat the Basic baseline on clarity and cultural accessibility - the
             dimensions that matter most for low-resource multilingual learners.
           </p>
         </Card>
@@ -72,7 +72,7 @@ export default function ResearchPage() {
           </table>
         </div>
         <p className="mt-3 text-xs text-ink-faint">
-          Each cell is the mean rater score (1–5) across all problems generated under that
+          Each cell is the mean rater score (1-5) across all problems generated under that
           condition. Export the full rater-level dataset from the Exports page for analysis.
         </p>
       </Card>

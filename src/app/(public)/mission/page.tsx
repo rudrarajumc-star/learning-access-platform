@@ -11,7 +11,7 @@ export default function MissionPage() {
     },
     {
       title: "Measurement",
-      body: "Treat every session as data — so progress is provable, not anecdotal.",
+      body: "Treat every session as data - so progress is provable, not anecdotal.",
     },
     {
       title: "Equity in AI",
@@ -38,9 +38,8 @@ export default function MissionPage() {
         ))}
       </div>
       <blockquote className="mt-10 border-l-2 border-brand pl-5 text-lg text-ink">
-        “I started keeping a spreadsheet of every kid I tutored. It got messy fast. This is what it
-        turned into once I wanted to actually answer the question: is this helping?”
-        <span className="mt-2 block text-sm text-ink-faint">— Rudra, founder</span>
+        {"\"I started keeping a spreadsheet of every kid I tutored. It got messy fast. This is what it turned into once I wanted to actually answer the question: is this helping?\""}
+        <span className="mt-2 block text-sm text-ink-faint">- Rudra, founder</span>
       </blockquote>
     </div>
   );

@@ -18,11 +18,11 @@ interface ClassItem {
 }
 
 const CLASSES: ClassItem[] = [
-  { title: "Math Foundations", subject: "Math", level: "Grades 4–6", day: "Mon", time: "5:00 PM", lang: ["Telugu", "English"], tutor: "Anika", seats: "6 of 12 seats", color: "#2d66f5" },
-  { title: "Algebra Basics", subject: "Math", level: "Grades 7–9", day: "Tue", time: "6:00 PM", lang: ["English"], tutor: "Rudra", seats: "3 of 12 seats", color: "#2d66f5" },
+  { title: "Math Foundations", subject: "Math", level: "Grades 4-6", day: "Mon", time: "5:00 PM", lang: ["Telugu", "English"], tutor: "Anika", seats: "6 of 12 seats", color: "#2d66f5" },
+  { title: "Algebra Basics", subject: "Math", level: "Grades 7-9", day: "Tue", time: "6:00 PM", lang: ["English"], tutor: "Rudra", seats: "3 of 12 seats", color: "#2d66f5" },
   { title: "Reading Club", subject: "Reading", level: "All levels", day: "Wed", time: "5:00 PM", lang: ["English"], tutor: "Priya", seats: "Open", color: "#7c5cff" },
   { title: "English Conversation", subject: "English", level: "Beginners", day: "Thu", time: "6:00 PM", lang: ["Hindi", "English"], tutor: "Meena", seats: "5 of 10 seats", color: "#16a578" },
-  { title: "Word Problems Workshop", subject: "Math", level: "Grades 5–8", day: "Fri", time: "5:30 PM", lang: ["Telugu"], tutor: "Karthik", seats: "Open", color: "#2d66f5" },
+  { title: "Word Problems Workshop", subject: "Math", level: "Grades 5-8", day: "Fri", time: "5:30 PM", lang: ["Telugu"], tutor: "Karthik", seats: "Open", color: "#2d66f5" },
   { title: "Saturday Study Hall", subject: "Drop-in", level: "Any age", day: "Sat", time: "10:00 AM", lang: ["Any"], tutor: "Whole team", seats: "Drop in anytime", color: "#d3860a" },
 ];
 
@@ -178,7 +178,7 @@ export default function ClassesClient() {
           </div>
           <div className="mt-6 rounded-xl border border-dashed border-border bg-surface-2/40 p-5 text-center text-sm text-ink-soft">
             We record our group classes so you can rewatch anytime. Recordings drop here after each
-            session — check back soon.
+            session - check back soon.
           </div>
         </>
       )}

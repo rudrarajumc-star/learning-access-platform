@@ -1,8 +1,8 @@
 import Lessons from "./Lessons";
 
 export const metadata = {
-  title: "Lessons — English, Math, Science, Social Studies & Coding",
-  description: "Free lessons in English, math, science, social studies, and coding — worked examples, quizzes, and progress tracking, right in the app.",
+  title: "Lessons - English, Math, Science, Social Studies & Coding",
+  description: "Free lessons in English, math, science, social studies, and coding - worked examples, quizzes, and progress tracking, right in the app.",
 };
 
 export default function LessonsPage() {
@@ -17,7 +17,7 @@ export default function LessonsPage() {
             Learn <span className="text-gradient">English, Math, Science &amp; more</span>, right here.
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-ink-soft">
-            Five subjects — English grammar, and math, science, social studies &amp; coding by age
+            Five subjects - English grammar, and math, science, social studies &amp; coding by age
             group. Worked examples, quizzes, and progress you can track. Free, no account.
           </p>
         </div>

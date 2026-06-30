@@ -32,7 +32,7 @@ export default function PublicResearchPage() {
           The <span className="font-medium text-brand">{best.label}</span> condition currently scores
           highest overall ({best.overall}/5), versus {baseline.overall}/5 for the unguided{" "}
           <span className="font-medium">Basic</span> baseline. Language-aware prompts gain the most on
-          clarity and cultural accessibility — the dimensions that matter most for multilingual
+          clarity and cultural accessibility - the dimensions that matter most for multilingual
           learners.
         </p>
         <div className="mt-4 space-y-2">

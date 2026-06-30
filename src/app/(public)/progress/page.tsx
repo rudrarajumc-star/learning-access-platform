@@ -2,7 +2,7 @@ import Progress from "./Progress";
 
 export const metadata = {
   title: "My Progress",
-  description: "Track how far you've gotten across English, math, science, social studies, and coding — and earn a certificate.",
+  description: "Track how far you've gotten across English, math, science, social studies, and coding - and earn a certificate.",
 };
 
 export default function ProgressPage() {

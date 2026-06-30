@@ -32,7 +32,7 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3 className="mt-4 text-lg font-semibold text-ink">Message sent.</h3>
-        <p className="mt-1 text-sm text-ink-soft">Thanks for reaching out — we&apos;ll get back to you soon.</p>
+        <p className="mt-1 text-sm text-ink-soft">Thanks for reaching out - we&apos;ll get back to you soon.</p>
         <button className="btn-ghost mt-5" onClick={() => setSent(false)}>Send another</button>
       </div>
     );

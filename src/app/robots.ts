@@ -8,7 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        // Keep the private platform out of search results.
         disallow: [
           "/dashboard",
           "/students",

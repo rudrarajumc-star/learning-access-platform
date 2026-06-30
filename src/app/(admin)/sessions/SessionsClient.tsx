@@ -180,7 +180,7 @@ function LogSessionModal({
           <Field label="Duration (min)">
             <input type="number" className="input" value={form.duration} onChange={(e) => set("duration", Number(e.target.value))} />
           </Field>
-          <Field label="Engagement (1–5)">
+          <Field label="Engagement (1-5)">
             <input type="number" min={1} max={5} className="input" value={form.engagement} onChange={(e) => set("engagement", Number(e.target.value))} />
           </Field>
           <Field label="Next step">
@@ -204,7 +204,7 @@ function LogSessionModal({
                 tutor: form.tutor,
                 subject,
                 topic: form.topic,
-                weakArea: form.weakArea || "—",
+                weakArea: form.weakArea || "-",
                 duration: form.duration,
                 engagement: form.engagement,
                 notes: form.notes,

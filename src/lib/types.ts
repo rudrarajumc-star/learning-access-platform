@@ -1,4 +1,3 @@
-// Mirrors supabase/schema.sql.
 export type SubjectName = "Math" | "English";
 
 export type EnglishLevel = "Emerging" | "Developing" | "Proficient";

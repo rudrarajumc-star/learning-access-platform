@@ -13,7 +13,6 @@ import {
   YAxis,
 } from "recharts";
 
-// Literal colors — CSS vars don't resolve inside SVG fill/stroke.
 const C = {
   brand: "#2d66f5",
   good: "#16a578",
