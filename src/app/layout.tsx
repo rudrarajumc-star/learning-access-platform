@@ -42,10 +42,26 @@ export const metadata: Metadata = {
   },
 };
 
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "Learning Access Initiative",
+  url: siteUrl,
+  logo: `${siteUrl}/logo.svg`,
+  description:
+    "Free tutoring, live classes, and lessons in English, math, science, social studies, and coding for multilingual students.",
+  email: "hello@learningaccessinitiative.org",
+  areaServed: "India",
+  sameAs: [],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={sans.variable}>
-      <body>{children}</body>
+      <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+        {children}
+      </body>
     </html>
   );
 }

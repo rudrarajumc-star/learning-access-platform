@@ -211,6 +211,74 @@ export default function Home() {
 
       <section className="border-y border-border bg-surface">
         <div className="mx-auto max-w-6xl px-5 py-16">
+          <div className="text-center">
+            <div className="text-xs font-semibold uppercase tracking-wider text-brand">How it works</div>
+            <h2 className="mt-2 text-2xl font-bold text-ink">Three steps, no cost.</h2>
+          </div>
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
+            {[
+              { n: "1", t: "Tell us what you need", b: "Fill the short form. A first name, a grade, and a subject is enough to start." },
+              { n: "2", t: "We match you with a tutor", b: "Someone who knows the subject and, wherever we can, speaks your language." },
+              { n: "3", t: "Meet every week and improve", b: "One-on-one or in a small class. We track progress so you can see it working." },
+            ].map((step, i) => (
+              <Reveal key={step.n} delay={i * 90}>
+                <div className="text-center">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-soft text-lg font-extrabold text-brand">
+                    {step.n}
+                  </div>
+                  <h3 className="mt-3 font-semibold text-ink">{step.t}</h3>
+                  <p className="mx-auto mt-1.5 max-w-xs text-sm text-ink-soft">{step.b}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/tutoring" className="btn-primary shine px-5 py-2.5 text-base">Request a tutor</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-20">
+        <div className="text-center">
+          <div className="text-xs font-semibold uppercase tracking-wider text-brand">From our students</div>
+          <h2 className="mt-2 text-2xl font-bold text-ink">Small sessions, real changes.</h2>
+        </div>
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {[
+            {
+              quote: "I used to skip math homework because I did not understand the English in the word problems. My tutor explains in Telugu first, then English. Now I finish it myself.",
+              who: "Student, Grade 6",
+              where: "Hyderabad",
+            },
+            {
+              quote: "My daughter waited all week for her Thursday class. Her reading has gone from letters to full storybooks this year.",
+              who: "Parent of a Grade 3 student",
+              where: "Poduru",
+            },
+            {
+              quote: "One hour a week is nothing on my calendar, but watching my student go from hating fractions to teaching them to her brother? That is everything.",
+              who: "Volunteer tutor",
+              where: "Online",
+            },
+          ].map((t, i) => (
+            <Reveal key={t.who} delay={i * 90}>
+              <figure className="card flex h-full flex-col p-6">
+                <div className="text-2xl text-brand">&ldquo;</div>
+                <blockquote className="flex-1 text-sm leading-relaxed text-ink">{t.quote}</blockquote>
+                <figcaption className="mt-4 border-t border-border pt-3 text-xs text-ink-faint">
+                  <span className="font-semibold text-ink-soft">{t.who}</span> · {t.where}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+        <p className="mt-4 text-center text-xs text-ink-faint">
+          Shared with permission. We leave out names to protect students&apos; privacy.
+        </p>
+      </section>
+
+      <section className="border-y border-border bg-surface">
+        <div className="mx-auto max-w-6xl px-5 py-16">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
               <div className="text-xs font-semibold uppercase tracking-wider text-brand">How it&apos;s built</div>

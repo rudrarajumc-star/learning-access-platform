@@ -59,6 +59,7 @@ export default function PublicLayout({ children }: { children: React.ReactNode }
               <Link key={n.href} href={n.href} className="hover:text-ink">{n.label}</Link>
             ))}
             <Link href="/progress" className="hover:text-ink">My Progress</Link>
+            <Link href="/faq" className="hover:text-ink">FAQ</Link>
             <Link href="/research" className="hover:text-ink">Research</Link>
             <Link href="/contact" className="hover:text-ink">Contact</Link>
             <Link href="/privacy" className="hover:text-ink">Privacy</Link>
