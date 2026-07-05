@@ -1,72 +1,83 @@
 # Learning Access Initiative
 
-A full-stack platform for a free tutoring nonprofit serving multilingual, low-resource students.
-It has two sides: a **public website** (free tutoring, live classes, in-app English & math
-lessons, and a curated learning-resource hub) and a **private staff platform** (dashboards,
-student/session tracking, analytics, CSV export, and an AI practice-problem research workflow).
+Free tutoring, live classes, and a full self-study curriculum for multilingual students who
+can't get help anywhere else. This is the whole thing: the public website families use to sign
+up, the in-app lessons students learn from, and the private platform our tutors use to track who
+we're helping and whether it's actually working.
 
-> Runs with **zero setup** - `npm install && npm run dev`. It ships with a deterministic seeded
-> demo dataset, working forms, and a shared-code login, so the whole thing is browsable
-> immediately. Each production piece (email, database, real auth, domain) flips on via env vars.
+It started as a spreadsheet of every kid I tutored. It got messy fast. This is what it turned
+into once I wanted to answer one question honestly: is this helping?
 
-## Features
+**Reach so far:** 114+ students tutored, 1,000+ tutoring hours, 6 volunteer tutors, 3 learning
+centers, most of them in Hyderabad.
 
-**Public site**
-- **Free tutoring** request form, **live class** schedule + recordings, in-app **Lessons**
-  (Wren & Martin-style English grammar lessons and NCERT-aligned math by age group, with worked
-  examples), **LGBTQ+ support** with vetted helplines (India + US/international), and a **Learn**
-  hub linking 20+ free resources.
-- Volunteer + contact forms, Mission/Impact/Research pages.
-- Animated, responsive UI: cursor-spotlight hero, scroll reveals, 3D-tilt cards, count-up stats,
-  animated charts; full mobile menu and `prefers-reduced-motion` support.
-- Production basics: keyboard-accessible (skip link, focus rings), custom 404 + error pages,
-  per-page SEO with a dynamic Open Graph image, web manifest, and security headers.
+> Runs with zero setup: `npm install && npm run dev`. It ships with a seeded demo dataset,
+> working forms, and a shared-code login, so the whole thing is browsable immediately. Each
+> production piece (email, database, real auth, custom domain) turns on through env vars.
 
-**Staff platform** (behind login)
-- Dashboard, Students (+ profiles), Sessions, Tutors, Weak-Topic tracker, Practice Bank,
-  Research Scores (prompt-condition comparison), Analytics, and CSV Exports.
+## What's inside
 
-## Stack
+**For students and families (public)**
+- **Request a tutor** and **live class** schedule, free, in the language spoken at home.
+- **Lessons** you can work through in the browser across five subjects: English grammar
+  (Wren & Martin style), and NCERT-aligned math, science, social studies, and beginner coding
+  by age group. Every topic has a worked example and practice, English and coding lessons end
+  with an **auto-graded quiz**, and a **My Progress** dashboard tracks completion with rings and
+  a printable certificate when you finish a subject.
+- **Learn** hub linking 20+ vetted free resources, **LGBTQ+ support** with real helplines
+  (India and international), plus Mission, Impact, FAQ, and Contact pages.
 
-Next.js 15 (App Router) · TypeScript · Tailwind CSS · Recharts · seeded demo data
-(swappable for Supabase/Postgres + Auth) · deployable on Vercel.
+**For staff (behind a login)**
+- Dashboard, student profiles, session logging, weak-topic tracking, analytics, and one-click
+  CSV export. Students are tracked by anonymous codes, never names.
+
+**Under the hood**
+- Fully responsive with a real mobile menu, keyboard-accessible (skip link, focus rings),
+  custom 404 and error pages, per-page SEO with a dynamic Open Graph image, a web manifest,
+  `FAQPage` and `EducationalOrganization` structured data, security headers, and motion that
+  respects `prefers-reduced-motion`.
+
+## Built with
+
+Next.js 15 (App Router), TypeScript, Tailwind CSS, and Recharts. Progress is stored client-side;
+the seeded data layer is written to swap cleanly for Supabase (Postgres + Auth) in production.
 
 ## Quick start
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000
-npm run build        # production build
-npm run lint         # eslint (clean)
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run lint     # eslint, clean
 ```
 
-Staff login: **Tutor login** → access code `lai-2026` (change via `LA_ACCESS_CODE`).
+Staff login: use **Tutor login** with the access code `lai-2026` (change it via `LA_ACCESS_CODE`).
+Edit headline stats in `src/lib/siteStats.ts`. Replace `public/logo.svg` to change the logo
+everywhere.
 
 ## Going to production
 
-1. **GitHub** - push this repo (see below).
-2. **Vercel** - import the repo, deploy. Add env vars from `.env.local.example`.
-3. **Domain** - buy one, add it in Vercel → Settings → Domains, set the DNS records.
-4. **Forms → email** - create a [Resend](https://resend.com) key; set `RESEND_API_KEY` and
-   `LEAD_NOTIFY_EMAIL`. Until then, submissions log to the server console.
-5. **Database + real logins** - create a Supabase project, run `supabase/schema.sql`, set the
-   `NEXT_PUBLIC_SUPABASE_*` vars, then move the helpers in `src/lib/queries.ts` to Supabase
-   (return shapes already match, so the UI doesn't change).
-6. **Before launch** - have `/privacy` and `/terms` reviewed (you collect minors' data), verify the
-   helpline numbers, and set a real contact email.
+1. Push this repo to GitHub.
+2. Import it on [Vercel](https://vercel.com) and deploy. Add the env vars from `.env.local.example`.
+3. Buy a domain and connect it in Vercel, then set `NEXT_PUBLIC_SITE_URL`.
+4. For form emails, create a [Resend](https://resend.com) key and set `RESEND_API_KEY` and
+   `LEAD_NOTIFY_EMAIL`. Until then, submissions are logged server-side.
+5. To store real student data, create a Supabase project, run `supabase/schema.sql`, set the
+   `NEXT_PUBLIC_SUPABASE_*` vars, and swap the helpers in `src/lib/queries.ts` (the return shapes
+   already match, so the UI doesn't change).
+6. Before launch: have `/privacy` and `/terms` reviewed (we collect minors' data) and re-verify
+   the helpline numbers.
 
-## Project structure
+## Structure
 
 ```
 src/
   app/
-    (public)/   marketing + student-facing: home, tutoring, lessons, classes, learn,
-                lgbtq, impact, mission, join, contact, privacy, terms, login
-    (admin)/    staff platform: dashboard, students, sessions, research-scores, exports, …
+    (public)/   home, tutoring, lessons, classes, learn, lgbtq, impact, mission,
+                join, faq, contact, privacy, terms, progress, login
+    (admin)/    dashboard, students, sessions, analytics, research-scores, exports
     api/lead/   form submission handler (email-ready)
-    sitemap.ts · robots.ts · icon.svg
-  components/   UI, charts, animation primitives (Reveal, Tilt, CountUp, HeroFX), Logo
-  lib/          types, seed data, queries (the Supabase swap point), csv, auth, actions
+  components/   UI, charts, and animation primitives (Reveal, Tilt, CountUp, HeroFX)
+  lib/          types, seed data, queries, csv, auth, siteStats
 supabase/schema.sql   Postgres schema mirroring the data model
-public/logo.svg       brand logo (replace with your own file to rebrand everywhere)
 ```
