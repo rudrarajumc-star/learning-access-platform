@@ -28,8 +28,12 @@ centers, most of them in Hyderabad.
   (India and international), plus Mission, Impact, FAQ, and Contact pages.
 
 **For staff (behind a login)**
-- Dashboard, student profiles, session logging, weak-topic tracking, analytics, and one-click
-  CSV export. Students are tracked by anonymous codes, never names.
+- Dashboard, student profiles, session logging, weak-topic tracking, research charts, and
+  one-click CSV export. Students are tracked by anonymous codes, never names.
+- A **site analytics** dashboard powered by its own first-party tracker: visitors, page views,
+  average visit length, traffic sources, devices, top countries, a live activity feed, and a
+  visit-to-tutor-request funnel. No cookies for tracking, no third-party scripts, and no names,
+  emails, or IP addresses are ever stored. Do Not Track is honored.
 
 **Under the hood**
 - Fully responsive with a real mobile menu, keyboard-accessible (skip link, focus rings),
@@ -75,9 +79,11 @@ src/
   app/
     (public)/   home, tutoring, lessons, classes, learn, lgbtq, impact, mission,
                 join, faq, contact, privacy, terms, progress, login
-    (admin)/    dashboard, students, sessions, analytics, research-scores, exports
+    (admin)/    dashboard, insights, students, sessions, analytics, research-scores, exports
     api/lead/   form submission handler (email-ready)
-  components/   UI, charts, and animation primitives (Reveal, Tilt, CountUp, HeroFX)
+    api/track/  first-party analytics ingestion; api/insights serves the dashboard
+  components/   UI, charts, and animation primitives (Reveal, Tilt, CountUp, HeroFX, AnalyticsTracker)
   lib/          types, seed data, queries, csv, auth, siteStats
+  lib/analytics/  client tracker, event store, aggregation, and seeded demo traffic
 supabase/schema.sql   Postgres schema mirroring the data model
 ```

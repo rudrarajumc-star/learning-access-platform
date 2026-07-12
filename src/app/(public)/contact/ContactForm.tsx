@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics/client";
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -16,9 +17,8 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-    } catch {
-      /* optimistic */
-    }
+    } catch {}
+    track("lead_submit", { type: String(payload.type || "Contact message") });
     setBusy(false);
     setSent(true);
   }

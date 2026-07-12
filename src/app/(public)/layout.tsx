@@ -2,6 +2,7 @@ import Link from "next/link";
 import PublicNav from "@/components/PublicNav";
 import MobileNav from "@/components/MobileNav";
 import ScrollProgress from "@/components/ScrollProgress";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 import Logo from "@/components/Logo";
 
 const nav = [
@@ -29,6 +30,7 @@ export default function PublicLayout({ children }: { children: React.ReactNode }
         Skip to content
       </a>
       <ScrollProgress />
+      <AnalyticsTracker />
       <header className="sticky top-0 z-20 border-b border-border bg-surface/80 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
           <Link href="/" className="group flex items-center gap-2">

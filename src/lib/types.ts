@@ -28,7 +28,7 @@ export interface Tutor {
 }
 
 export interface Student {
-  id: string; // anonymized code, e.g. HYD-014
+  id: string;
   gradeLevel: number;
   primaryLanguage: string;
   englishLevel: EnglishLevel;
@@ -58,7 +58,7 @@ export interface Session {
   subject: SubjectName;
   topicId: string;
   weakArea: string;
-  engagement: number; // 1-5
+  engagement: number;
   notes: string;
   nextStep: string;
 }
@@ -83,7 +83,7 @@ export interface RubricScore {
   topicAlignment: number;
   difficultyFit: number;
   clarity: number;
-  languageBurden: number; // lower burden = better; we display as "accessibility"
+  languageBurden: number;
   scaffolding: number;
   tutorUsefulness: number;
   culturalAccessibility: number;

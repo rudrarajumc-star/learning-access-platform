@@ -6,6 +6,7 @@ export const ACCESS_CODE = process.env.LA_ACCESS_CODE || "lai-2026";
 
 export const PROTECTED_PREFIXES = [
   "/dashboard",
+  "/insights",
   "/students",
   "/tutors",
   "/sessions",

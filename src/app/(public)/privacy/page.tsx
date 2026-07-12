@@ -24,7 +24,7 @@ export default function PrivacyPage() {
           <ul className="ml-5 list-disc space-y-1">
             <li><b>When you contact us or sign up:</b> a name (a first name is fine), the way you want us to reach you, the subject a student needs help with, and languages spoken at home.</li>
             <li><b>For enrolled students:</b> we work from anonymized codes wherever possible. We may keep grade level, baseline and current scores, weak topics, and tutor session notes to measure progress.</li>
-            <li><b>Basic technical data:</b> standard server logs from our hosting provider. We do not use invasive tracking.</li>
+            <li><b>Basic usage data:</b> we run our own privacy-first analytics to see which pages and lessons help. It is anonymous and stores no names, emails, or IP addresses, as described in the section on how we measure the site below.</li>
           </ul>
         </Section>
 
@@ -51,6 +51,15 @@ export default function PrivacyPage() {
           Access is limited to people who need it. We prefer anonymized student codes over names in
           our systems, and we keep information only as long as it&apos;s useful for tutoring and
           reporting.
+        </Section>
+
+        <Section title="How we measure the site">
+          To understand what is working, we count anonymous page views and a few actions like
+          starting a lesson or sending the tutor request form. This is first-party and runs on our
+          own server, with no third-party advertising or social trackers. We do not set cookies for
+          analytics, and we never store names, emails, message text, or IP addresses alongside it. A
+          random id in your browser lets us tell a repeat visit from a new one, and nothing more. If
+          your browser sends a Do Not Track signal, we do not count you at all.
         </Section>
 
         <Section title="Other sites we link to">

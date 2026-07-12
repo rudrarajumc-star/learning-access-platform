@@ -52,7 +52,6 @@ export default function Progress() {
 
   return (
     <div>
-      {/* Overall */}
       <div className="card flex flex-col items-center gap-6 p-7 sm:flex-row sm:gap-10">
         <div className="relative">
           <Ring pct={overall} color="#2d66f5" size={140} stroke={12} />
@@ -85,8 +84,6 @@ export default function Progress() {
           </div>
         </div>
       </div>
-
-      {/* Per subject */}
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {stats.map((s) => (
           <div key={s.key} className="card flex items-center gap-4 p-5">
@@ -112,8 +109,6 @@ export default function Progress() {
           </div>
         ))}
       </div>
-
-      {/* Badges */}
       <h3 className="mb-3 mt-10 text-sm font-semibold uppercase tracking-wide text-ink-faint">Badges</h3>
       <div className="flex flex-wrap gap-4">
         {stats.map((s) => {

@@ -9,7 +9,8 @@ export const adminGroups: { heading: string; items: NavItem[] }[] = [
     heading: "Overview",
     items: [
       { href: "/dashboard", label: "Dashboard", icon: "M3 12h7V3H3v9Zm0 9h7v-7H3v7Zm11 0h7V12h-7v9Zm0-18v7h7V3h-7Z" },
-      { href: "/analytics", label: "Analytics", icon: "M4 19V5m5 14V9m5 10V12m5 7V7" },
+      { href: "/insights", label: "Site Analytics", icon: "M3 3v18h18M8 15l3-4 3 3 4-6" },
+      { href: "/analytics", label: "Research Charts", icon: "M4 19V5m5 14V9m5 10V12m5 7V7" },
     ],
   },
   {

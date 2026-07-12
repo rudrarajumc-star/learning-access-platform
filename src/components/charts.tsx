@@ -7,6 +7,8 @@ import {
   BarChart,
   CartesianGrid,
   Cell,
+  Pie,
+  PieChart,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -118,6 +120,85 @@ export function GroupedBar({
           <Bar key={k} dataKey={k} fill={colors[i]} radius={[5, 5, 0, 0]} barSize={22} isAnimationActive={false} />
         ))}
       </BarChart>
+    </ResponsiveContainer>
+  );
+}
+
+export const DONUT_PALETTE = ["#2d66f5", "#16a578", "#d3860a", "#7c5cff", "#e0463c", "#9aa6bf"];
+
+export function TrafficArea({
+  data,
+  height = 260,
+}: {
+  data: { label: string; visitors: number; views: number }[];
+  height?: number;
+}) {
+  return (
+    <ResponsiveContainer width="100%" height={height}>
+      <AreaChart data={data} margin={{ top: 8, right: 8, bottom: 0, left: -18 }}>
+        <defs>
+          <linearGradient id="g-views" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={C.brand} stopOpacity={0.28} />
+            <stop offset="100%" stopColor={C.brand} stopOpacity={0} />
+          </linearGradient>
+          <linearGradient id="g-visitors" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={C.good} stopOpacity={0.26} />
+            <stop offset="100%" stopColor={C.good} stopOpacity={0} />
+          </linearGradient>
+        </defs>
+        <CartesianGrid strokeDasharray="3 3" stroke={GRID} vertical={false} />
+        <XAxis dataKey="label" tick={AXIS} tickLine={false} axisLine={false} minTickGap={24} />
+        <YAxis tick={AXIS} tickLine={false} axisLine={false} width={36} allowDecimals={false} />
+        <Tooltip {...tip} />
+        <Area
+          type="monotone"
+          dataKey="views"
+          name="Page views"
+          stroke={C.brand}
+          strokeWidth={2}
+          fill="url(#g-views)"
+          isAnimationActive={false}
+        />
+        <Area
+          type="monotone"
+          dataKey="visitors"
+          name="Visitors"
+          stroke={C.good}
+          strokeWidth={2}
+          fill="url(#g-visitors)"
+          isAnimationActive={false}
+        />
+      </AreaChart>
+    </ResponsiveContainer>
+  );
+}
+
+export function Donut({
+  data,
+  height = 200,
+}: {
+  data: { name: string; value: number }[];
+  height?: number;
+}) {
+  return (
+    <ResponsiveContainer width="100%" height={height}>
+      <PieChart>
+        <Pie
+          data={data}
+          dataKey="value"
+          nameKey="name"
+          innerRadius={54}
+          outerRadius={82}
+          paddingAngle={2}
+          stroke="none"
+          isAnimationActive={false}
+        >
+          {data.map((_, i) => (
+            <Cell key={i} fill={DONUT_PALETTE[i % DONUT_PALETTE.length]} />
+          ))}
+        </Pie>
+        <Tooltip {...tip} />
+      </PieChart>
     </ResponsiveContainer>
   );
 }

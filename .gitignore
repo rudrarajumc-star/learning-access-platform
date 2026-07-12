@@ -7,5 +7,6 @@
 npm-debug.log*
 .env*.local
 .vercel
+/.data
 next-env.d.ts
 tsconfig.tsbuildinfo

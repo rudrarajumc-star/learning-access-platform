@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/analytics/client";
 
 export default function JoinForm() {
   const [sent, setSent] = useState(false);
@@ -16,9 +17,8 @@ export default function JoinForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-    } catch {
-      /* optimistic success */
-    }
+    } catch {}
+    track("lead_submit", { type: String(payload.type || "Volunteer signup") });
     setBusy(false);
     setSent(true);
   }

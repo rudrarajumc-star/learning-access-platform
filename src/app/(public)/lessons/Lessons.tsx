@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { track } from "@/lib/analytics/client";
 import {
   CODING_LESSONS,
   ENGLISH_LESSONS,
@@ -100,8 +101,13 @@ function LessonReader({ lessons, heading }: { lessons: EnglishLesson[]; heading:
   const pct = Math.round((doneCount / lessons.length) * 100);
   const quiz = QUIZZES[lesson.id];
 
-  const go = (newId: string) => {
+  const open = (newId: string) => {
     setId(newId);
+    track("lesson_start", { id: newId });
+  };
+
+  const go = (newId: string) => {
+    open(newId);
     window.scrollTo({ top: 120, behavior: "smooth" });
   };
 
@@ -116,7 +122,7 @@ function LessonReader({ lessons, heading }: { lessons: EnglishLesson[]; heading:
 
       <div className="grid gap-6 md:grid-cols-[230px_1fr]">
         <div className="md:hidden">
-          <select value={id} onChange={(e) => setId(e.target.value)} className="input">
+          <select value={id} onChange={(e) => open(e.target.value)} className="input">
             {lessons.map((l) => (
               <option key={l.id} value={l.id}>{done.includes(l.id) ? "✓ " : ""}{l.title}</option>
             ))}
@@ -129,7 +135,7 @@ function LessonReader({ lessons, heading }: { lessons: EnglishLesson[]; heading:
             {lessons.map((l) => (
               <button
                 key={l.id}
-                onClick={() => setId(l.id)}
+                onClick={() => open(l.id)}
                 className={`flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm transition-colors ${
                   l.id === id ? "bg-brand-soft font-medium text-brand" : "text-ink-soft hover:bg-surface-2"
                 }`}
@@ -177,10 +183,16 @@ function LessonReader({ lessons, heading }: { lessons: EnglishLesson[]; heading:
             </div>
           )}
 
-          {quiz && quiz.length > 0 && <LessonQuiz key={lesson.id} questions={quiz} />}
+          {quiz && quiz.length > 0 && <LessonQuiz key={lesson.id} lessonId={lesson.id} questions={quiz} />}
 
           <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-border pt-5">
-            <button onClick={() => toggle(lesson.id)} className={isDone ? "btn-ghost" : "btn-primary"}>
+            <button
+              onClick={() => {
+                toggle(lesson.id);
+                if (!isDone) track("lesson_complete", { id: lesson.id });
+              }}
+              className={isDone ? "btn-ghost" : "btn-primary"}
+            >
               {isDone ? "✓ Completed" : "Mark complete"}
             </button>
             {next && (
@@ -193,11 +205,15 @@ function LessonReader({ lessons, heading }: { lessons: EnglishLesson[]; heading:
   );
 }
 
-function LessonQuiz({ questions }: { questions: QuizQ[] }) {
+function LessonQuiz({ lessonId, questions }: { lessonId: string; questions: QuizQ[] }) {
   const [picks, setPicks] = useState<(number | null)[]>(questions.map(() => null));
   const answered = picks.filter((p) => p !== null).length;
   const score = picks.reduce((s: number, p, i) => s + (p === questions[i].answer ? 1 : 0), 0);
   const allDone = answered === questions.length;
+
+  useEffect(() => {
+    if (allDone) track("quiz_submit", { id: lessonId, score, total: questions.length });
+  }, [allDone, lessonId, score, questions.length]);
 
   return (
     <div className="mt-6 rounded-2xl border border-border bg-surface p-5 shadow-card">
@@ -277,7 +293,10 @@ function BandView({ bands }: { bands: GradeBand[] }) {
         {bands.map((b) => (
           <button
             key={b.id}
-            onClick={() => setBandId(b.id)}
+            onClick={() => {
+              setBandId(b.id);
+              track("lesson_start", { id: b.id });
+            }}
             className={`rounded-xl border px-4 py-2 text-left transition-all duration-200 ${
               b.id === bandId ? "border-brand bg-brand-soft" : "border-border bg-surface hover:border-brand/40"
             }`}
@@ -304,7 +323,10 @@ function BandView({ bands }: { bands: GradeBand[] }) {
                   <div className="flex items-start justify-between gap-2">
                     <h3 className="font-semibold text-ink">{t.title}</h3>
                     <button
-                      onClick={() => toggle(tid)}
+                      onClick={() => {
+                        toggle(tid);
+                        if (!tdone) track("lesson_complete", { id: tid });
+                      }}
                       className={`shrink-0 rounded-full px-2 py-0.5 text-[11px] font-medium transition-colors ${
                         tdone ? "bg-good text-white" : "border border-border text-ink-faint hover:text-ink"
                       }`}

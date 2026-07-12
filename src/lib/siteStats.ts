@@ -1,4 +1,3 @@
-// Edit these numbers to update the impact stats shown across the public site.
 export const SITE_STATS = {
   studentsTutored: 114,
   tutoringHours: 1000,
