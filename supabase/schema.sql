@@ -1,7 +1,7 @@
 create extension if not exists "pgcrypto";
 
 create table if not exists centers (
-  id           text primary key,            -- short code, e.g. HYD
+  id           text primary key,
   name         text not null,
   city         text,
   region       text,
@@ -20,9 +20,8 @@ create table if not exists tutors (
   created_at   timestamptz default now()
 );
 
--- Store anonymized codes only - no raw PII.
 create table if not exists students (
-  id                 text primary key,      -- anonymized code, e.g. HYD-014
+  id                 text primary key,
   grade_level        int,
   primary_language   text,
   english_level      text check (english_level in ('Emerging','Developing','Proficient')),
@@ -109,7 +108,3 @@ create table if not exists resources (
   uploaded_by    text,
   created_at     timestamptz default now()
 );
-
--- Enable Row Level Security in production and add policies per role
--- (admin = full, tutor = assigned rows, viewer = read-only).
--- alter table students enable row level security;  -- etc.
