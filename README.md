@@ -8,7 +8,7 @@ we're helping and whether it's actually working.
 It started as a spreadsheet of every kid I tutored. It got messy fast. This is what it turned
 into once I wanted to answer one question honestly: is this helping?
 
-**Reach so far:** 114+ students tutored, 1,000+ tutoring hours, 6 volunteer tutors, 3 learning
+**Reach so far:** 210+ students tutored, 1,200+ tutoring hours, 6 volunteer tutors, 3 learning
 centers, most of them in Hyderabad.
 
 > Runs with zero setup: `npm install && npm run dev`. It ships with a seeded demo dataset,
